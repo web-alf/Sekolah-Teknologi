@@ -1,0 +1,330 @@
+
+---
+import "../../styles/pages/program.css";
+
+const programs = [
+  {
+    number: "01",
+    icon: "💻",
+    title: "Coding & Computational Thinking",
+    description:
+      "Anak belajar berpikir seperti pembuat program: memecah masalah, menyusun langkah, menemukan kesalahan, dan memperbaikinya. Di SD lewat permainan dan blok visual, di SMP dengan bahasa pemrograman teks, di SMA dalam proyek perangkat lunak yang dipakai orang lain.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "02",
+    icon: "🤖",
+    title: "Robotika & Elektronika",
+    description:
+      "Siswa merakit, memprogram, dan menguji robot serta perangkat sederhana. Kegagalan di meja kerja adalah bagian dari pelajaran, dan setiap tim mempresentasikan hasil rakitannya pada akhir semester.",
+    levels: ["SD kelas 4–6", "SMP", "SMA"],
+  },
+  {
+    number: "03",
+    icon: "🎨",
+    title: "Desain & Media Digital",
+    description:
+      "Dari menggambar digital hingga memproduksi video dan animasi. Siswa belajar menyampaikan pesan dengan jujur dan estetis, serta memahami tanggung jawab sebagai pembuat konten.",
+    levels: ["SD kelas 4–6", "SMP", "SMA"],
+  },
+  {
+    number: "04",
+    icon: "🔬",
+    title: "Sains Eksperimental",
+    description:
+      "Setiap konsep IPA yang bisa dipraktikkan, dipraktikkan. Laboratorium dan halaman sekolah menjadi tempat mengamati, mengukur, dan mencatat, bukan hanya menghafal rumus.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "05",
+    icon: "📖",
+    title: "Tahfidz & Tahsin",
+    description:
+      "Bimbingan harian dengan target hafalan bertahap per jenjang, disertai murajaah rutin agar hafalan terjaga. Bacaan diperbaiki sejak awal sehingga anak membaca Al-Qur’an dengan benar dan percaya diri.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "06",
+    icon: "🌍",
+    title: "English for Tech",
+    description:
+      "Bahasa Inggris dipraktikkan sebagai bahasa kerja di kelas teknologi: membaca petunjuk, menulis deskripsi karya, dan mempresentasikan proyek. Bahasa dipelajari karena dibutuhkan, bukan sekadar untuk ujian.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "07",
+    icon: "🚀",
+    title: "Kewirausahaan Digital",
+    description:
+      "Siswa membuat produk atau jasa kecil, memasarkannya secara digital, dan mengelola hasilnya. Puncaknya adalah Market Day, di mana orang tua dan masyarakat menjadi pembeli sungguhan.",
+    levels: ["SMP", "SMA"],
+  },
+  {
+    number: "08",
+    icon: "🤝",
+    title: "Proyek Sosial Berdampak",
+    description:
+      "Setiap semester, tiap kelas memilih satu masalah nyata di sekitar sekolah dan menyelesaikannya dengan pengetahuan yang dimiliki. Teknologi dipakai untuk menolong, bukan hanya mengesankan.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "09",
+    icon: "🏆",
+    title: "Exhibition Day",
+    description:
+      "Pameran karya semesteran di hadapan orang tua, mentor, dan tamu undangan. Siswa berlatih menjelaskan proses, bukan hanya memamerkan hasil.",
+    levels: ["SD", "SMP", "SMA"],
+  },
+  {
+    number: "10",
+    icon: "👨‍🏫",
+    title: "Mentor Praktisi",
+    description:
+      "Kelas tamu dan bimbingan proyek dari praktisi entitas media, teknologi, penerbitan, dan bisnis di ekosistem Alfatihah & Almadinah Group.",
+    levels: ["SMP", "SMA"],
+  },
+  {
+    number: "11",
+    icon: "🏢",
+    title: "Magang Ekosistem",
+    description:
+      "Praktik kerja terbimbing di entitas mitra selama [durasi], dengan laporan dan penilaian yang menjadi bagian portofolio.",
+    levels: ["SMA"],
+  },
+];
+
+const extracurriculars = [
+  {
+    icon: "💻",
+    category: "Teknologi",
+    activities: [
+      "Klub Coding",
+      "Klub Robotika",
+      "Klub Game Developer",
+      "Klub Konten Kreator",
+    ],
+  },
+  {
+    icon: "🔬",
+    category: "Sains & Literasi",
+    activities: [
+      "Klub Sains",
+      "Klub Menulis & Jurnalistik Digital",
+      "English Club",
+    ],
+  },
+  {
+    icon: "📖",
+    category: "Keagamaan",
+    activities: [
+      "Tahfidz Intensif",
+      "Tilawah & Kaligrafi",
+    ],
+  },
+  {
+    icon: "⚽",
+    category: "Seni & Olahraga",
+    activities: [
+      "Seni Rupa Digital",
+      "Musik Perkusi",
+      "Panahan",
+      "Futsal",
+      "Bela Diri",
+    ],
+  },
+  {
+    icon: "🌟",
+    category: "Kepemimpinan",
+    activities: [
+      "Pramuka",
+      "OSIS/Majelis Siswa",
+      "Klub Kewirausahaan",
+    ],
+  },
+];
+---
+
+<div class="program-page">
+
+  <!-- HERO HALAMAN PROGRAM -->
+  <section class="program-page-hero">
+    <div class="program-page-container">
+
+      <p class="program-page-eyebrow">
+        PROGRAM UNGGULAN & EKSTRAKURIKULER
+      </p>
+
+      <h1>
+        Belajar yang Terasa Nyata, {""}
+        <span>Setiap Minggu.</span>
+      </h1>
+
+      <p class="program-page-hero-description">
+        Program di Sekolah Teknologi dirancang agar setiap
+        pekan anak pulang membawa sesuatu yang bisa diceritakan:
+        kode yang akhirnya berjalan, robot yang bergerak,
+        ayat yang selesai dihafal, atau ide yang mulai berbentuk.
+        Berikut program yang berjalan lintas jenjang,
+        dengan kedalaman yang disesuaikan usia.
+      </p>
+
+      <div class="program-page-hero-actions">
+        <a
+          href="#program-unggulan"
+          class="program-page-btn-primary"
+        >
+          Jelajahi Program
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <a
+          href="#ekstrakurikuler"
+          class="program-page-btn-secondary"
+        >
+          Lihat Ekstrakurikuler
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEMUA PROGRAM UNGGULAN -->
+  <section
+    class="program-page-section"
+    id="program-unggulan"
+    aria-labelledby="program-page-title"
+  >
+    <div class="program-page-container">
+
+      <div class="program-page-section-heading">
+        <p class="program-page-section-label">
+          PEMBELAJARAN BERBASIS PENGALAMAN
+        </p>
+
+        <h2 id="program-page-title">
+          Program <span>Unggulan</span>
+        </h2>
+
+        <p>
+          Dari keterampilan teknologi hingga pembentukan
+          karakter, setiap program menghubungkan
+          pengetahuan dengan pengalaman nyata.
+        </p>
+      </div>
+
+      <div class="program-page-grid">
+        {programs.map((program) => (
+          <article class="program-page-card">
+
+            <div class="program-page-card-top">
+              <span
+                class="program-page-card-icon"
+                aria-hidden="true"
+              >
+                {program.icon}
+              </span>
+
+              <span class="program-page-card-number">
+                {program.number}
+              </span>
+            </div>
+
+            <h3>{program.title}</h3>
+
+            <p class="program-page-card-description">
+              {program.description}
+            </p>
+
+            <div class="program-page-card-footer">
+              <span class="program-page-level-label">
+                TERSEDIA UNTUK
+              </span>
+
+              <div class="program-page-levels">
+                {program.levels.map((level) => (
+                  <span class="program-page-level-badge">
+                    {level}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EKSTRAKURIKULER -->
+  <section
+    class="program-page-extracurricular-section"
+    id="ekstrakurikuler"
+    aria-labelledby="program-page-extra-title"
+  >
+    <div class="program-page-container">
+
+      <div class="program-page-section-heading">
+        <p class="program-page-section-label">
+          TEMUKAN MINAT, KEMBANGKAN BAKAT
+        </p>
+
+        <h2 id="program-page-extra-title">
+          Ekstrakurikuler
+        </h2>
+
+        <p>
+          Ekstrakurikuler dipilih siswa sesuai minat,
+          berjalan setiap Jumat, dan wajib diikuti
+          minimal satu kegiatan per semester.
+        </p>
+      </div>
+
+      <div class="program-page-extra-grid">
+        {extracurriculars.map((group) => (
+          <article class="program-page-extra-card">
+
+            <div class="program-page-extra-heading">
+              <span
+                class="program-page-extra-icon"
+                aria-hidden="true"
+              >
+                {group.icon}
+              </span>
+
+              <h3>{group.category}</h3>
+            </div>
+
+            <ul class="program-page-extra-list">
+              {group.activities.map((activity) => (
+                <li>{activity}</li>
+              ))}
+            </ul>
+
+          </article>
+        ))}
+      </div>
+
+      <div class="program-page-extra-note">
+        <span
+          class="program-page-note-icon"
+          aria-hidden="true"
+        >
+          📅
+        </span>
+
+        <div>
+          <h3>Jumat, Hari Eksplorasi Minat</h3>
+
+          <p>
+            Setiap siswa memilih ekstrakurikuler
+            sesuai minat dan mengikuti minimal
+            satu kegiatan setiap semester.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>

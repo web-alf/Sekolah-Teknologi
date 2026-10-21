@@ -1,0 +1,445 @@
+
+/* =========================================
+   FAQ SECTION - SEKOLAH TEKNOLOGI
+   FULL REVISI - 1 LAYAR LAPTOP
+========================================= */
+
+.faq-section {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  min-height: calc(100dvh - 50px);
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 90px 0 100px;
+
+  background: linear-gradient(
+    115deg,
+    #ffffff 0%,
+    #ffffff 60%,
+    #f1faff 100%
+  );
+
+  box-sizing: border-box;
+}
+
+.faq-section,
+.faq-section * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER FAQ
+========================================= */
+
+.faq-section .faq-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* =========================================
+   HEADER FAQ
+========================================= */
+
+.faq-section .faq-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  gap: 0;
+
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+/* =========================================
+   LABEL PINK
+========================================= */
+
+.faq-section .faq-eyebrow {
+  display: block;
+
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #d41491;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   JUDUL FAQ
+   SAMA DENGAN SECTION LAIN
+========================================= */
+
+.faq-section .faq-heading h2 {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 0 14px;
+  padding: 0;
+
+  color: #102b50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+/* WARNA BIRU PADA JUDUL */
+
+.faq-section .faq-heading h2 span {
+  display: inline;
+  color: #008dd2;
+}
+
+/* =========================================
+   PARAGRAF PENJELASAN
+========================================= */
+
+.faq-section .faq-intro {
+  display: block;
+
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================
+   FAQ GRID
+========================================= */
+
+.faq-section .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   KOLOM FAQ
+========================================= */
+
+.faq-section .faq-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+  min-width: 0;
+}
+
+/* =========================================
+   FAQ ITEM
+========================================= */
+
+.faq-section .faq-item {
+  min-width: 0;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #e7eef5;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 18px rgba(16, 43, 80, 0.04);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-section .faq-item:hover {
+  border-color: #bfe6fa;
+}
+
+.faq-section .faq-item[open] {
+  border-color: #d7eaf6;
+  box-shadow: 0 8px 24px rgba(16, 43, 80, 0.06);
+}
+
+/* =========================================
+   PERTANYAAN
+========================================= */
+
+.faq-section .faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+  min-height: 62px;
+  padding: 18px 20px;
+
+  color: #102b50;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-section .faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-section .faq-question::marker {
+  content: "";
+}
+
+.faq-section .faq-question:focus-visible {
+  outline: 2px solid #008dd2;
+  outline-offset: -4px;
+  border-radius: 12px;
+}
+
+/* =========================================
+   IKON PLUS / MINUS
+========================================= */
+
+.faq-section .faq-toggle {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+
+  width: 18px;
+  height: 18px;
+}
+
+.faq-section .faq-toggle::before,
+.faq-section .faq-toggle::after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  background: #008dd2;
+  border-radius: 2px;
+
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.faq-section .faq-toggle::before {
+  width: 12px;
+  height: 2px;
+}
+
+.faq-section .faq-toggle::after {
+  width: 2px;
+  height: 12px;
+}
+
+.faq-section .faq-item[open] .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* =========================================
+   JAWABAN
+========================================= */
+
+.faq-section .faq-answer {
+  padding: 0 20px 20px;
+}
+
+.faq-section .faq-answer p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .faq-section {
+    min-height: auto;
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
+  .faq-section .faq-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .faq-section .faq-heading {
+    margin-bottom: 26px;
+  }
+
+  .faq-section .faq-eyebrow {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .faq-section .faq-heading h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .faq-section .faq-intro {
+    max-width: 770px;
+    font-size: 14px;
+  }
+
+  .faq-section .faq-grid {
+    gap: 14px;
+  }
+
+  .faq-section .faq-question {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .faq-section .faq-answer {
+    padding: 0 16px 18px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .faq-section {
+    min-height: auto;
+    padding: 55px 0 65px;
+  }
+
+  .faq-section .faq-container {
+    padding: 0 20px;
+  }
+
+  /* HEADER MOBILE */
+
+  .faq-section .faq-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+    margin-bottom: 24px;
+  }
+
+  /* LABEL PINK MOBILE */
+
+  .faq-section .faq-eyebrow {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  /* JUDUL MOBILE */
+
+  .faq-section .faq-heading h2 {
+    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  .faq-section .faq-heading h2 span {
+    display: inline;
+  }
+
+  /* PARAGRAF MOBILE */
+
+  .faq-section .faq-intro {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* GRID MOBILE */
+
+  .faq-section .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .faq-section .faq-column {
+    gap: 12px;
+  }
+
+  /* KOTAK FAQ MOBILE */
+
+  .faq-section .faq-question {
+    min-height: 58px;
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .faq-section .faq-answer {
+    padding: 0 16px 18px;
+  }
+
+  .faq-section .faq-answer p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 400px) {
+
+  .faq-section .faq-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .faq-section .faq-heading h2 {
+    font-size: 22px;
+  }
+
+  .faq-section .faq-question {
+    padding: 14px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS ANIMASI
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .faq-section .faq-item,
+  .faq-section .faq-toggle::before,
+  .faq-section .faq-toggle::after {
+    transition: none;
+  }
+}

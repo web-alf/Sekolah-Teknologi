@@ -1,11 +1,253 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+import Header from "../components/layout/Header.astro";
+
+import Hero from "../components/home/Hero.astro";
+import JenjangSection from "../components/home/JenjangSection.astro";
+import KeunggulanSection from "../components/home/KeunggulanSection.astro";
+import ProgramSection from "../components/home/ProgramSection.astro";
+import FAQSection from "../components/home/FAQSection.astro";
+import TentangKamiSection from "../components/home/TentangKamiSection.astro";
+import Jenjang from "../components/pages/Jenjang.astro";
+import Lingkungan from "../components/pages/Lingkungan.astro";
+import Footer from "../components/layout/Footer.astro";
+import Program from "../components/pages/Program.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Sekolah Teknologi — pendidikan SD, SMP, dan SMA dengan pembelajaran teknologi, Al-Qur'an, dan pengembangan karakter."
+    />
+
+    <title>Beranda | Sekolah Teknologi</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main id="konten-utama">
+      <Hero />
+
+      <!-- SECTION JENJANG -->
+      <div class="home-section home-section--jenjang">
+        <JenjangSection />
+      </div>
+
+      <!-- SECTION KEUNGGULAN -->
+      <div class="home-section home-section--keunggulan">
+        <KeunggulanSection />
+      </div>
+
+      <!-- SECTION PROGRAM UNGGULAN -->
+      <div class="home-section home-section--program">
+        <ProgramSection />
+      </div>
+
+      <!-- SECTION FAQ -->
+      <div class="home-section home-section--faq">
+        <FAQSection />
+      </div>
+
+      <!-- SECTION TENTANG KAMI -->
+      <div class="home-section home-section--tentang">
+        <TentangKamiSection />
+      </div>
+
+      <!-- HALAMAN / SECTION LAINNYA -->
+      <Jenjang />
+      <Program />
+      <Lingkungan />
+
+      <Footer />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* ===================================
+     RESET GLOBAL
+  =================================== */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #102b50;
+  }
+
+  /* ===================================
+     PENGATURAN UTAMA HALAMAN BERANDA
+  =================================== */
+
+  #konten-utama {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ===================================
+     WRAPPER SEMUA SECTION
+  =================================== */
+
+  #konten-utama .home-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===================================
+     JARAK ANTAR SECTION - DESKTOP
+  =================================== */
+
+  /* JENJANG */
+
+  #konten-utama .home-section--jenjang {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* KEUNGGULAN */
+
+  #konten-utama .home-section--keunggulan {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* PROGRAM UNGGULAN */
+
+  #konten-utama .home-section--program {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* FAQ */
+
+  #konten-utama .home-section--faq {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* TENTANG KAMI */
+
+  #konten-utama .home-section--tentang {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* ===================================
+     LEBAR KONTEN DAN MARGIN KANAN-KIRI
+     JENJANG, KEUNGGULAN, PROGRAM
+  =================================== */
+
+  #konten-utama .jenjang-section .jenjang-container,
+  #konten-utama .keunggulan-section .keunggulan-container,
+  #konten-utama .program-section .program-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  /* ===================================
+     RESPONSIVE TABLET
+  =================================== */
+
+  @media (max-width: 1000px) {
+
+    #konten-utama .jenjang-section .jenjang-container,
+    #konten-utama .keunggulan-section .keunggulan-container,
+    #konten-utama .program-section .program-container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    #konten-utama .home-section--jenjang {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--keunggulan {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--program {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--faq {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--tentang {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  /* ===================================
+     RESPONSIVE MOBILE
+  =================================== */
+
+  @media (max-width: 700px) {
+
+    #konten-utama .jenjang-section .jenjang-container,
+    #konten-utama .keunggulan-section .keunggulan-container,
+    #konten-utama .program-section .program-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #konten-utama .home-section--jenjang {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--keunggulan {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--program {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--faq {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #konten-utama .home-section--tentang {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+</style>

@@ -1,0 +1,359 @@
+
+/* =========================================
+   HEADER SEKOLAH TEKNOLOGI
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 70px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #edf1f5;
+  overflow: visible;
+}
+
+/* HEADER CONTAINER */
+
+.header-inner {
+  position: relative;
+
+  max-width: 1280px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 160px;
+  height: 50px;
+
+  text-decoration: none;
+}
+
+/* Logo tidak memengaruhi tinggi header */
+
+.brand img {
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 100px;
+  height: auto;
+
+  max-width: none;
+  max-height: none;
+
+  display: block;
+  object-fit: contain;
+
+  transform: translateY(-50%) scale(1.25);
+  transform-origin: left center;
+}
+
+/* =========================================
+   NAVIGASI
+========================================= */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-item {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 0;
+
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #008dd2;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 2px;
+
+  height: 3px;
+  border-radius: 4px;
+  background: #008dd2;
+}
+
+/* =========================================
+   DROPDOWN JENJANG
+========================================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* Ikon V menggunakan CSS */
+
+.dropdown-chevron {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+
+  margin-left: 2px;
+  flex-shrink: 0;
+
+  transform: translateY(-2px) rotate(45deg);
+}
+
+/* Menu dropdown */
+
+.dropdown-menu {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: -18px;
+
+  min-width: 190px;
+  padding: 8px;
+
+  background: #ffffff;
+  border: 1px solid #e8eef4;
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(16, 43, 80, 0.1);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px;
+
+  border-radius: 8px;
+
+  color: #102b50;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #eaf7fd;
+  color: #008dd2;
+}
+
+/* =========================================
+   TOMBOL LIHAT JENJANG
+========================================= */
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  border-radius: 100px;
+  background: #008dd2;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-cta:hover {
+  background: #007bb8;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   HAMBURGER MOBILE
+========================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+
+  background: #102b50;
+  border-radius: 3px;
+}
+
+/* =========================================
+   TABLET & MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+  .header-inner {
+    height: 60px;
+    padding: 0 24px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .brand {
+    flex: 0 0 180px;
+    height: 60px;
+  }
+
+  .brand img {
+    width: 180px;
+    transform: translateY(-50%) scale(1.15);
+  }
+
+  .main-nav {
+    display: none;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    padding: 12px 24px 20px;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    background: #ffffff;
+    border-bottom: 1px solid #edf1f5;
+    box-shadow: 0 12px 24px rgba(16, 43, 80, 0.08);
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 14px 0;
+  }
+
+  .nav-item.active::after {
+    display: none;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    position: static;
+
+    min-width: 0;
+    padding: 4px 8px;
+
+    background: #f5f7fa;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 12px;
+  }
+
+  .header-cta {
+    margin-left: auto;
+    margin-right: 16px;
+    padding: 10px 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* =========================================
+   HP KECIL
+========================================= */
+
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 16px;
+  }
+
+  .brand {
+    flex: 0 0 160px;
+  }
+
+  .brand img {
+    width: 160px;
+    transform: translateY(-50%) scale(1.15);
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+  .main-nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

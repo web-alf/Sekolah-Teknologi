@@ -1,0 +1,41 @@
+
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Sekolah Teknologi Alfatihah",
+  description = "Sekolah Teknologi Alfatihah — Explore, Create, Innovate.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <Header />
+
+    <!-- KONTEN HALAMAN -->
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <Footer />
+  </body>
+</html>

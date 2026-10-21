@@ -1,0 +1,459 @@
+
+/* ===================================
+   KEUNGGULAN SEKOLAH TEKNOLOGI
+   UKURAN & JARAK DISAMAKAN DENGAN JENJANG
+=================================== */
+
+.keunggulan-section {
+  width: 100%;
+  padding: 5px 0 25px;
+  margin: 0;
+
+  background: linear-gradient(
+    115deg,
+    #ffffff 0%,
+    #ffffff 60%,
+    #eef8ff 100%
+  );
+
+  box-sizing: border-box;
+}
+
+/* ===================================
+   CONTAINER
+   SEJAJAR DENGAN JENJANG & PROGRAM
+=================================== */
+
+.keunggulan-section .keunggulan-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* ===================================
+   HEADER SECTION
+=================================== */
+
+.keunggulan-heading {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+/* ===================================
+   TULISAN KECIL PINK
+   KENAPA SEKOLAH TEKNOLOGI
+=================================== */
+
+.keunggulan-section .keunggulan-eyebrow {
+  display: block;
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #d41491;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ===================================
+   JUDUL BESAR
+   KENAPA ORANG TUA MEMILIH
+   SEKOLAH TEKNOLOGI
+=================================== */
+
+.keunggulan-heading h2 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 0;
+
+  color: #102b50;
+  font-size: clamp(20px, 3vw, 35px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* WARNA BIRU PADA JUDUL */
+
+.keunggulan-heading h2 span {
+  display: inline;
+  color: #008dd2;
+}
+
+/* ===================================
+   PARAGRAF DI BAWAH JUDUL
+=================================== */
+
+.keunggulan-section .keunggulan-intro {
+  display: block;
+  width: 100%;
+  max-width: 840px;
+  margin: 0;
+  padding: 0;
+
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ===================================
+   GRID 8 KARTU KEUNGGULAN
+=================================== */
+
+.keunggulan-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================
+   KARTU KEUNGGULAN
+=================================== */
+
+.keunggulan-card {
+  min-width: 0;
+  min-height: 260px;
+  margin: 0;
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 28px rgba(16, 43, 80, 0.04);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* HOVER KARTU */
+
+.keunggulan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 32px rgba(16, 43, 80, 0.1);
+}
+
+/* ===================================
+   NOMOR DAN IKON
+=================================== */
+
+.keunggulan-card-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 16px;
+}
+
+/* NOMOR KARTU */
+
+.keunggulan-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 7px;
+  background: #008dd2;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* IKON KARTU */
+
+.keunggulan-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  color: #008dd2;
+}
+
+.keunggulan-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===================================
+   WARNA BIRU
+=================================== */
+
+.keunggulan-card--blue .keunggulan-number {
+  background: #008dd2;
+}
+
+.keunggulan-card--blue .keunggulan-icon {
+  color: #008dd2;
+}
+
+/* ===================================
+   WARNA PINK
+=================================== */
+
+.keunggulan-card--pink .keunggulan-number {
+  background: #d41491;
+}
+
+.keunggulan-card--pink .keunggulan-icon {
+  color: #d41491;
+}
+
+/* ===================================
+   WARNA ORANGE
+=================================== */
+
+.keunggulan-card--orange .keunggulan-number {
+  background: #ff8a1e;
+}
+
+.keunggulan-card--orange .keunggulan-icon {
+  color: #ff8a1e;
+}
+
+/* ===================================
+   TEKS JUDUL KARTU
+=================================== */
+
+.keunggulan-card h3 {
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #102b50;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* ===================================
+   DESKRIPSI KARTU
+=================================== */
+
+.keunggulan-card p {
+  margin: 0;
+  padding: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ===================================
+   RESPONSIVE TABLET
+=================================== */
+
+@media (max-width: 1000px) {
+
+  .keunggulan-section {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
+  /* CONTAINER SAMA DENGAN JENJANG */
+
+  .keunggulan-section .keunggulan-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* HEADER */
+
+  .keunggulan-heading {
+    margin-bottom: 30px;
+  }
+
+  .keunggulan-heading h2 {
+    font-size: clamp(26px, 3.5vw, 34px);
+  }
+
+  /* PARAGRAF */
+
+  .keunggulan-section .keunggulan-intro {
+    max-width: 770px;
+    font-size: 15px;
+  }
+
+  /* GRID */
+
+  .keunggulan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* KARTU */
+
+  .keunggulan-card {
+    min-height: 230px;
+    padding: 20px;
+  }
+}
+
+/* ===================================
+   RESPONSIVE MOBILE
+=================================== */
+
+@media (max-width: 700px) {
+
+  /* KONTEN NAIK, BACKGROUND TETAP */
+
+  .keunggulan-section {
+    width: 100%;
+    padding: 5px 0 40px;
+    margin: 0;
+  }
+
+  /* CONTAINER MOBILE */
+
+  .keunggulan-section .keunggulan-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ===================================
+     HEADER MOBILE
+  =================================== */
+
+  .keunggulan-heading {
+    margin-bottom: 26px;
+  }
+
+  /* TULISAN KECIL */
+
+  .keunggulan-section .keunggulan-eyebrow {
+    margin-bottom: 12px;
+
+    color: #d41491;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+  }
+
+  /* JUDUL BESAR */
+
+  .keunggulan-heading h2 {
+    margin-bottom: 14px;
+
+    font-size: clamp(25px, 6vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+  }
+
+  /* PARAGRAF MOBILE */
+
+  .keunggulan-section .keunggulan-intro {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ===================================
+     GRID MOBILE
+  =================================== */
+
+  .keunggulan-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ===================================
+     KARTU MOBILE
+  =================================== */
+
+  .keunggulan-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .keunggulan-card-icons {
+    margin-bottom: 16px;
+  }
+
+  .keunggulan-card h3 {
+    font-size: 16px;
+  }
+
+  .keunggulan-card p {
+    font-size: 13px;
+  }
+}
+
+/* ===================================
+   LAYAR MOBILE KECIL
+=================================== */
+
+@media (max-width: 400px) {
+
+  .keunggulan-section .keunggulan-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .keunggulan-heading h2 {
+    font-size: 25px;
+  }
+
+  .keunggulan-card {
+    padding: 18px;
+  }
+}
+
+
+/* =========================================
+   JUDUL KEUNGGULAN
+   SAMAKAN DENGAN JUDUL JENJANG
+========================================= */
+
+.keunggulan-section .keunggulan-heading h2 {
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #102b50;
+}
+
+/* WARNA TEKS SEKOLAH TEKNOLOGI */
+.keunggulan-section .keunggulan-heading h2 span {
+  color: #008dd2;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .keunggulan-section .keunggulan-heading h2 {
+    font-size: 24px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .keunggulan-section .keunggulan-heading h2 {
+    font-size: 22px;
+  }
+}
+

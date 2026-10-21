@@ -1,0 +1,475 @@
+
+/* =========================================
+   FOOTER SEKOLAH TEKNOLOGI
+   FULL REVISI - COMPACT & RESPONSIVE
+========================================= */
+
+/* =========================================
+   FOOTER UTAMA
+========================================= */
+
+.st-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #19385f;
+
+  border-top: 1px solid #edf0f5;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.st-footer *,
+.st-footer *::before,
+.st-footer *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+   SAMA DENGAN SECTION LAIN
+========================================= */
+
+.st-footer-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 28px 40px 0;
+}
+
+/* =========================================
+   GRID UTAMA FOOTER
+========================================= */
+
+.st-footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2.6fr)
+    minmax(0, 1fr)
+    minmax(0, 0.75fr)
+    minmax(0, 1.2fr)
+    minmax(0, 1.65fr);
+
+  align-items: start;
+
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+/* =========================================
+   BRAND & LOGO
+========================================= */
+
+.st-footer-brand {
+  min-width: 0;
+}
+
+.st-footer-logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+
+  color: #164b86;
+  text-decoration: none;
+}
+
+.st-footer-logo-mark {
+  display: flex;
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+}
+
+.st-footer-logo-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.st-footer-logo-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  font-size: 17px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+/* LOGO BERUPA GAMBAR */
+
+.st-footer .st-footer-logo-image {
+  display: block;
+
+  width: 140px;
+  max-width: 140px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   DESKRIPSI SEKOLAH
+========================================= */
+
+.st-footer-description {
+  max-width: 310px;
+
+  margin: 14px 0 14px;
+  padding: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =========================================
+   SOSIAL MEDIA
+========================================= */
+
+.st-footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.st-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: #fce8f5;
+  color: #df39a3;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.st-footer-social a:hover {
+  background: #f7cce8;
+  transform: translateY(-2px);
+}
+
+.st-footer-social a:focus-visible {
+  outline: 2px solid #008dd2;
+  outline-offset: 3px;
+}
+
+.st-footer-social svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================
+   KOLOM LINK
+========================================= */
+
+.st-footer-column {
+  min-width: 0;
+}
+
+.st-footer-column h3 {
+  margin: 3px 0 14px;
+  padding: 0;
+
+  color: #173b6b;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.st-footer-column ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.st-footer-column li {
+  margin: 0;
+  padding: 0;
+}
+
+.st-footer-column a {
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.st-footer-column a:hover {
+  color: #008dd2;
+}
+
+.st-footer-column a:focus-visible {
+  outline: 2px solid #008dd2;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* =========================================
+   KOLOM KONTAK
+========================================= */
+
+.st-footer-contact ul {
+  gap: 10px;
+}
+
+.st-footer-contact a {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  overflow-wrap: anywhere;
+}
+
+.st-footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-width: 16px;
+
+  color: #e536a3;
+
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* =========================================
+   BAGIAN BAWAH FOOTER
+========================================= */
+
+.st-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid #e5eaf1;
+}
+
+.st-footer-bottom p {
+  margin: 0;
+  padding: 0;
+
+  color: #7b8ba1;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   LINK LEGAL
+========================================= */
+
+.st-footer-legal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+.st-footer-legal a {
+  color: #7b8ba1;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-decoration: none;
+}
+
+.st-footer-legal a:hover {
+  color: #008dd2;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+  .st-footer-container {
+    padding: 28px 24px 0;
+  }
+
+  .st-footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+    padding-bottom: 22px;
+  }
+
+  .st-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .st-footer-description {
+    max-width: 500px;
+  }
+
+  .st-footer-column h3 {
+    margin-bottom: 12px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .st-footer-container {
+    padding: 26px 20px 0;
+  }
+
+  .st-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 20px;
+    row-gap: 24px;
+
+    padding-bottom: 22px;
+  }
+
+  /* BRAND LEBAR PENUH */
+
+  .st-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .st-footer .st-footer-logo-image {
+    width: 135px;
+    max-width: 135px;
+  }
+
+  .st-footer-description {
+    max-width: 100%;
+
+    margin: 12px 0;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* MENU */
+
+  .st-footer-column h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+  }
+
+  .st-footer-column ul {
+    gap: 9px;
+  }
+
+  .st-footer-column a {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* KONTAK */
+
+  .st-footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .st-footer-contact ul {
+    gap: 10px;
+  }
+
+  /* FOOTER BAWAH */
+
+  .st-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  .st-footer-legal {
+    gap: 16px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 400px) {
+  .st-footer-container {
+    padding: 24px 16px 0;
+  }
+
+  .st-footer-grid {
+    column-gap: 14px;
+    row-gap: 20px;
+  }
+
+  .st-footer-column h3 {
+    font-size: 13px;
+  }
+
+  .st-footer-column a {
+    font-size: 12px;
+  }
+
+  .st-footer-legal {
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .st-footer-social a {
+    transition: none;
+  }
+
+  .st-footer-social a:hover {
+    transform: none;
+  }
+}

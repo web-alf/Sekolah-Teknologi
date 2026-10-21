@@ -1,0 +1,113 @@
+
+---
+import "../../styles/components/jenjang-section.css";
+
+const jenjang = [
+  {
+    nama: "SD",
+    fase: "Explore",
+    kelas: "Kelas 1–6",
+    deskripsi:
+      "Usia 6–12 tahun. Anak menjelajah sains, logika, dan literasi digital lewat bermain dan bereksperimen, sambil menanamkan hafalan Al-Qur’an dan adab sejak dini.",
+    link: "/jenjang",
+    warna: "blue",
+    ikon: "sprout",
+  },
+  {
+    nama: "SMP",
+    fase: "Create",
+    kelas: "Kelas 7–9",
+    deskripsi:
+      "Usia 12–15 tahun. Remaja belajar membangun: menulis kode, merancang produk, dan menyelesaikan masalah nyata di sekitarnya dalam proyek berbasis tim.",
+    link: "/jenjang/smp",
+    warna: "pink",
+    ikon: "lightbulb",
+  },
+  {
+    nama: "SMA",
+    fase: "Innovate",
+    kelas: "Kelas 10–12",
+    deskripsi:
+      "Usia 15–18 tahun. Siswa memilih jalur peminatan teknologi, menyusun portofolio, magang di ekosistem Alfatihah, dan disiapkan untuk kuliah, karier, atau wirausaha.",
+    link: "/jenjang/sma",
+    warna: "orange",
+    ikon: "chart",
+  },
+];
+---
+
+<section class="jenjang-section" aria-labelledby="jenjang-title">
+  <div class="jenjang-container">
+
+    <!-- HEADER SECTION -->
+    <div class="jenjang-heading">
+      <p class="jenjang-eyebrow">
+        TIGA JENJANG, SATU PERJALANAN
+      </p>
+
+      <h2 id="jenjang-title">
+        Satu Sekolah,
+        <span>Tiga Fase Pertumbuhan</span>
+      </h2>
+
+      <p class="jenjang-intro">
+        Kami merancang pendidikan sebagai perjalanan utuh,
+        bukan potongan-potongan jenjang yang terpisah.
+        Setiap fase membangun fondasi untuk fase berikutnya.
+      </p>
+    </div>
+
+    <!-- KARTU JENJANG -->
+    <div class="jenjang-grid">
+      {jenjang.map((item) => (
+        <article class={`jenjang-card jenjang-card--${item.warna}`}>
+
+          <div class="jenjang-card-top">
+            <div class="jenjang-icon" aria-hidden="true">
+              {item.ikon === "sprout" && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22v-9" />
+                  <path d="M12 13C6 13 4 9 4 5c5 0 8 2 8 8Z" />
+                  <path d="M12 16c0-6 3-9 8-9 0 5-2 9-8 9Z" />
+                </svg>
+              )}
+
+              {item.ikon === "lightbulb" && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
+                  <path d="M8 15a7 7 0 1 1 8 0c-1 1-1 2-1 3H9c0-1 0-2-1-3Z" />
+                </svg>
+              )}
+
+              {item.ikon === "chart" && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 20v-5" />
+                  <path d="M10 20V9" />
+                  <path d="M15 20v-8" />
+                  <path d="M20 20V4" />
+                </svg>
+              )}
+            </div>
+
+            <div class="jenjang-card-identity">
+              <h3>{item.nama} — {item.fase}</h3>
+              <span class="jenjang-class">{item.kelas}</span>
+            </div>
+          </div>
+
+          <p class="jenjang-description">
+            {item.deskripsi}
+          </p>
+
+          <a class="jenjang-link" href={item.link}>
+            Lihat {item.nama}
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

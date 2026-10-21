@@ -1,0 +1,280 @@
+
+---
+import Header from "../components/layout/Header.astro";
+import "../styles/pages/tentang-kami.css";
+
+const missions = [
+  "Menyelenggarakan pendidikan formal jenjang SD, SMP, dan SMA yang memenuhi standar nasional pendidikan dengan pembelajaran berbasis proyek dan teknologi.",
+  "Menanamkan Al-Qur’an, akidah, dan adab sebagai fondasi karakter setiap siswa melalui pembiasaan harian yang konsisten.",
+  "Membangun kecakapan teknologi yang bertumbuh sesuai usia: menjelajah di SD, mencipta di SMP, dan berinovasi di SMA.",
+  "Menghadirkan guru dan mentor yang menguasai bidangnya dan menjadi teladan akhlak.",
+  "Mengaitkan pembelajaran dengan dunia nyata melalui kemitraan dengan entitas usaha, lembaga, dan komunitas.",
+  "Melibatkan orang tua sebagai mitra pendidikan yang setara melalui komunikasi terbuka dan berkala.",
+];
+
+const values = [
+  {
+    title: "Iman",
+    description:
+      "Setiap ilmu bermula dari niat dan berakhir pada manfaat. Ibadah harian bukan pelengkap jadwal, melainkan pusatnya.",
+  },
+  {
+    title: "Ingin tahu",
+    description:
+      "Pertanyaan “kenapa” dan “bagaimana kalau” selalu disambut, bahkan ketika jawabannya belum ada.",
+  },
+  {
+    title: "Tekun",
+    description:
+      "Kode yang gagal dijalankan, robot yang jatuh, dan eksperimen yang meleset adalah bagian dari belajar; menyerah bukan.",
+  },
+  {
+    title: "Kolaboratif",
+    description:
+      "Karya besar dibangun bersama. Siswa belajar berbagi peran, memberi masukan, dan menghargai kontribusi orang lain.",
+  },
+  {
+    title: "Bermanfaat",
+    description:
+      "Ukuran keberhasilan karya bukan seberapa canggih, melainkan seberapa menolong orang lain.",
+  },
+];
+
+const philosophies = [
+  {
+    number: "01",
+    phase: "Explore",
+    level: "SD",
+    className: "explore",
+    question: "“Bagaimana dunia ini bekerja?”",
+    result:
+      "Rasa ingin tahu yang terarah, dasar logika, literasi digital yang sehat, hafalan dan adab yang tertanam.",
+  },
+  {
+    number: "02",
+    phase: "Create",
+    level: "SMP",
+    className: "create",
+    question: "“Apa yang bisa saya bangun dari yang saya pahami?”",
+    result:
+      "Karya pertama yang utuh: aplikasi sederhana, produk digital, proyek tim yang selesai dan dipresentasikan.",
+  },
+  {
+    number: "03",
+    phase: "Innovate",
+    level: "SMA",
+    className: "innovate",
+    question:
+      "“Masalah siapa yang bisa saya selesaikan, dan bagaimana caranya lebih baik?”",
+    result:
+      "Portofolio peminatan, pengalaman magang, karya yang diuji pengguna nyata, dan kesiapan kuliah atau berwirausaha.",
+  },
+];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dari Ruang Kelas Al-Qur’an ke Ruang Kelas Masa Depan"
+    />
+    <title>Tentang Kami | Sekolah Teknologi</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+
+      <!-- =====================================
+           LATAR BELAKANG DAN PERJALANAN
+      ===================================== -->
+      <section class="about-hero" id="latar-belakang">
+        <div class="about-container">
+
+          <div class="about-hero-content">
+
+            <p class="about-eyebrow">
+              LATAR BELAKANG DAN PERJALANAN
+            </p>
+
+            <h1>
+              Dari Ruang Kelas Al-Qur’an ke Ruang Kelas Masa Depan
+            </h1>
+
+            <div class="about-introduction">
+              <p>
+                Sekolah Teknologi lahir dari satu pengamatan sederhana
+                di ekosistem pendidikan Alfatihah: anak-anak hari ini
+                tumbuh dengan gawai di tangan, tetapi sangat sedikit
+                yang diajari memahami cara kerjanya, apalagi
+                menciptakan sesuatu darinya. Di sisi lain, kecakapan
+                teknologi tanpa fondasi iman dan adab hanya melahirkan
+                kepandaian tanpa arah.
+              </p>
+
+              <p>
+                Selama bertahun-tahun, keluarga besar Alfatihah
+                mengelola lembaga pendidikan dari jenjang usia dini
+                di Alfatihah School, program tahfidz di Rumah Tahfidz
+                Al-Fatihah, hingga jenjang menengah kejuruan berbasis
+                IT di Alhidayah Boarding School. Di samping itu berdiri
+                belasan entitas usaha di bawah Almadinah Group yang
+                bergerak di bidang media digital, penerbitan,
+                teknologi informasi, dan layanan profesional. Dari
+                pertemuan dua dunia inilah gagasan Sekolah Teknologi
+                terbentuk: sekolah formal harian yang mendidik anak
+                sejak SD hingga SMA untuk menguasai teknologi sebagai
+                cara berpikir, dengan Al-Qur’an sebagai kompasnya.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- DEKORASI VISUAL -->
+          <div class="about-hero-art" aria-hidden="true">
+            <div class="about-art-circle"></div>
+            <div class="about-art-square"></div>
+            <div class="about-art-line"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================
+           VISI
+      ===================================== -->
+      <section class="about-vision" id="visi">
+        <div class="about-container">
+
+          <div class="about-vision-card">
+            <h2>Visi</h2>
+
+            <p>
+              Menjadi sekolah rujukan yang melahirkan generasi Qur’ani
+              pencipta teknologi: cakap berpikir, terampil berkarya,
+              dan amanah dalam memberi manfaat bagi umat dan bangsa.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================
+           MISI
+      ===================================== -->
+      <section class="about-mission" id="misi">
+        <div class="about-container">
+
+          <div class="about-section-heading">
+            <h2>Misi</h2>
+          </div>
+
+          <ol class="about-mission-list">
+            {missions.map((mission) => (
+              <li>{mission}</li>
+            ))}
+          </ol>
+
+        </div>
+      </section>
+
+      <!-- =====================================
+           NILAI INTI
+      ===================================== -->
+      <section class="about-values" id="nilai-inti">
+        <div class="about-container">
+
+          <div class="about-section-heading">
+            <h2>Nilai inti</h2>
+          </div>
+
+          <div class="about-values-grid">
+
+            {values.map((value, index) => (
+              <article class="about-value-card">
+
+                <span
+                  class="about-value-number"
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <h3>{value.title}</h3>
+
+                <p>{value.description}</p>
+
+              </article>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================
+           FILOSOFI EXPLORE–CREATE–INNOVATE
+      ===================================== -->
+      <section class="about-philosophy" id="filosofi">
+        <div class="about-container">
+
+          <div class="about-philosophy-heading">
+            <h2>Filosofi Explore–Create–Innovate</h2>
+
+            <p>
+              Kami memandang 12 tahun pendidikan sebagai satu kurva
+              pertumbuhan dengan tiga fase yang saling menyambung.
+            </p>
+          </div>
+
+          <div class="about-philosophy-grid">
+
+            {philosophies.map((item) => (
+              <article
+                class={`about-philosophy-card ${item.className}`}
+              >
+
+                <div class="about-philosophy-card-top">
+                  <span
+                    class="about-philosophy-number"
+                    aria-hidden="true"
+                  >
+                    {item.number}
+                  </span>
+
+                  <span class="about-philosophy-level">
+                    {item.level}
+                  </span>
+                </div>
+
+                <h3>{item.phase}</h3>
+
+                <div class="about-philosophy-detail">
+                  <h4>Pertanyaan pemandu siswa</h4>
+
+                  <p class="about-philosophy-question">
+                    {item.question}
+                  </p>
+                </div>
+
+                <div class="about-philosophy-detail">
+                  <h4>Hasil yang terlihat</h4>
+
+                  <p>{item.result}</p>
+                </div>
+
+              </article>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

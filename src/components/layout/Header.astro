@@ -1,0 +1,194 @@
+
+---
+import "../../styles/components/header.css";
+import logoSekolah from "../../assets/logo/logo-sekolah-teknologi.png";
+
+// URL halaman saat ini
+const pathname =
+  Astro.url.pathname.replace(/\/+$/, "") || "/";
+
+// Mengecek menu aktif
+const isActive = (path: string) =>
+  path === "/"
+    ? pathname === "/"
+    : pathname === path || pathname.startsWith(path + "/");
+
+// Menu dropdown jenjang
+const jenjangMenu = [
+  {
+    nama: "SD — Explore",
+    link: "/jenjang/sd",
+  },
+  {
+    nama: "SMP — Create",
+    link: "/jenjang/smp",
+  },
+  {
+    nama: "SMA — Innovate",
+    link: "/jenjang/sma",
+  },
+];
+
+// Aktif jika sedang membuka halaman jenjang
+const isJenjangActive = isActive("/jenjang");
+---
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- LOGO SEKOLAH -->
+    <a
+      href="/"
+      class="brand"
+      aria-label="Sekolah Teknologi - Beranda"
+    >
+      <img
+        src={logoSekolah.src}
+        alt="Logo Sekolah Teknologi"
+        loading="eager"
+      />
+    </a>
+
+    <!-- NAVIGASI UTAMA -->
+    <nav
+      class="main-nav"
+      id="main-nav"
+      aria-label="Navigasi utama"
+    >
+
+      <!-- BERANDA -->
+      <a
+        href="/"
+        class:list={[
+          "nav-item",
+          { active: isActive("/") },
+        ]}
+        aria-current={pathname === "/" ? "page" : undefined}
+      >
+        Beranda
+      </a>
+
+      <!-- TENTANG KAMI -->
+      <a
+        href="/tentang-kami"
+        class:list={[
+          "nav-item",
+          { active: isActive("/tentang-kami") },
+        ]}
+        aria-current={
+          pathname === "/tentang-kami"
+            ? "page"
+            : undefined
+        }
+      >
+        Tentang Kami
+      </a>
+
+      <!-- DROPDOWN JENJANG -->
+      <div
+        class:list={[
+          "nav-dropdown",
+          { active: isJenjangActive },
+        ]}
+      >
+
+        <!-- KLIK JENJANG MENUJU HALAMAN JENJANG -->
+        <a
+          href="/jenjang"
+          class:list={[
+            "nav-item",
+            { active: isJenjangActive },
+          ]}
+          aria-haspopup="true"
+        >
+          Jenjang
+
+          <span
+            class="dropdown-chevron"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <!-- PILIH SD / SMP / SMA -->
+        <div class="dropdown-menu">
+
+          {jenjangMenu.map((item) => (
+            <a
+              href={item.link}
+              class:list={[
+                "dropdown-item",
+                {
+                  active: pathname === item.link,
+                },
+              ]}
+              aria-current={
+                pathname === item.link
+                  ? "page"
+                  : undefined
+              }
+            >
+              {item.nama}
+            </a>
+          ))}
+
+        </div>
+      </div>
+
+      <!-- PROGRAM -->
+      <a
+        href="/#program-unggulan"
+        class="nav-item"
+      >
+        Program
+      </a>
+
+      <!-- FASILITAS -->
+      <a
+        href="/fasilitas"
+        class:list={[
+          "nav-item",
+          { active: isActive("/fasilitas") },
+        ]}
+        aria-current={
+          pathname === "/fasilitas"
+            ? "page"
+            : undefined
+        }
+      >
+        Fasilitas
+      </a>
+
+    </nav>
+
+    <!-- TOMBOL DAFTAR -->
+    <a
+      href="/jenjang/sd"
+      class="header-cta"
+    >
+      Daftar Sekarang
+      <span aria-hidden="true">→</span>
+    </a>
+
+    <!-- HAMBURGER MOBILE -->
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Buka menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- SCRIPT HEADER -->
+<script>
+  import "../../scripts/header";
+</script>

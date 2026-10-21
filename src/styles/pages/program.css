@@ -1,0 +1,838 @@
+
+/* =========================================
+   HALAMAN PROGRAM SEKOLAH TEKNOLOGI
+   FULL REVISI - RAPI & PROPORSIONAL
+   KHUSUS .program-page
+========================================= */
+
+.program-page {
+  --container-width: 1280px;
+  --container-padding: 40px;
+  --primary: #102b50;
+  --secondary: #52667b;
+  --blue: #008dd2;
+  --pink: #d41491;
+  --border: #e3edf5;
+
+  width: 100%;
+  margin: 0;
+  background: #ffffff;
+  color: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.program-page *,
+.program-page *::before,
+.program-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.program-page .program-page-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* =========================================
+   HERO PROGRAM
+========================================= */
+
+.program-page .program-page-hero {
+  width: 100%;
+  padding: 34px 0 36px;
+  background: linear-gradient(
+    120deg,
+    #eef9ff 0%,
+    #ffffff 55%,
+    #fff0f8 100%
+  );
+}
+
+.program-page .program-page-eyebrow {
+  margin: 0 0 12px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.program-page .program-page-hero h1 {
+  max-width: 1000px;
+  margin: 0 0 14px;
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.program-page .program-page-hero h1 span {
+  color: var(--blue);
+}
+
+.program-page .program-page-hero-description {
+  max-width: 850px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   TOMBOL HERO
+========================================= */
+
+.program-page .program-page-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.program-page .program-page-btn-primary,
+.program-page .program-page-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.program-page .program-page-btn-primary {
+  background: var(--pink);
+  border: 1px solid var(--pink);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(212, 20, 145, 0.14);
+}
+
+.program-page .program-page-btn-primary:hover {
+  background: #b9107d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.program-page .program-page-btn-secondary {
+  background: #ffffff;
+  border: 1px solid #dce7f0;
+  color: var(--primary);
+}
+
+.program-page .program-page-btn-secondary:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: translateY(-2px);
+}
+
+.program-page .program-page-btn-primary:focus-visible,
+.program-page .program-page-btn-secondary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   SECTION PROGRAM UNGGULAN
+========================================= */
+
+.program-page .program-page-section {
+  width: 100%;
+  padding: 34px 0 42px;
+  background: #ffffff;
+  scroll-margin-top: 90px;
+}
+
+.program-page .program-page-section-heading {
+  max-width: 850px;
+  margin: 0 0 24px;
+}
+
+.program-page .program-page-section-label {
+  margin: 0 0 10px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.program-page .program-page-section-heading h2 {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.program-page .program-page-section-heading h2 span {
+  color: var(--blue);
+}
+
+.program-page
+  .program-page-section-heading
+  > p:not(.program-page-section-label) {
+  max-width: 850px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   GRID 11 PROGRAM
+========================================= */
+
+.program-page .program-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   KARTU PROGRAM
+========================================= */
+
+.program-page .program-page-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(16, 43, 80, 0.045);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.program-page .program-page-card:hover {
+  transform: translateY(-3px);
+  border-color: #b8e5fa;
+  box-shadow: 0 10px 24px rgba(16, 43, 80, 0.08);
+}
+
+.program-page .program-page-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.program-page .program-page-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #eaf7ff;
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.program-page .program-page-card-number {
+  color: #c7d6e4;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.program-page .program-page-card h3 {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.program-page .program-page-card-description {
+  flex: 1;
+  margin: 0 0 16px;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   FOOTER KARTU
+========================================= */
+
+.program-page .program-page-card-footer {
+  margin-top: auto;
+  padding-top: 13px;
+  border-top: 1px solid #edf2f7;
+}
+
+.program-page .program-page-level-label {
+  display: block;
+  margin: 0 0 9px;
+  color: #8293a7;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.program-page .program-page-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.program-page .program-page-level-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 100px;
+  background: #eaf7ff;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* =========================================
+   SECTION EKSTRAKURIKULER
+========================================= */
+
+.program-page .program-page-extracurricular-section {
+  width: 100%;
+  padding: 36px 0 44px;
+  background: linear-gradient(
+    120deg,
+    #f4fbff 0%,
+    #ffffff 60%,
+    #fff5fa 100%
+  );
+  scroll-margin-top: 90px;
+}
+
+.program-page .program-page-extra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+}
+
+.program-page .program-page-extra-card {
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(16, 43, 80, 0.045);
+}
+
+.program-page .program-page-extra-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.program-page .program-page-extra-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: #eaf7ff;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.program-page .program-page-extra-heading h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.program-page .program-page-extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-page .program-page-extra-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.program-page .program-page-extra-list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+
+/* =========================================
+   CATATAN JUMAT
+========================================= */
+
+.program-page .program-page-extra-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 20px 22px;
+  background: #eaf7ff;
+  border: 1px solid #d6efff;
+  border-radius: 16px;
+}
+
+.program-page .program-page-note-icon {
+  flex-shrink: 0;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.program-page .program-page-extra-note h3 {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.program-page .program-page-extra-note p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .program-page {
+    --container-padding: 24px;
+  }
+
+  .program-page .program-page-hero {
+    padding: 30px 0;
+  }
+
+  .program-page .program-page-hero h1 {
+    font-size: 28px;
+  }
+
+  .program-page .program-page-section,
+  .program-page .program-page-extracurricular-section {
+    padding: 32px 0;
+  }
+
+  .program-page .program-page-grid,
+  .program-page .program-page-extra-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .program-page .program-page-card,
+  .program-page .program-page-extra-card {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .program-page {
+    --container-padding: 20px;
+  }
+
+  .program-page .program-page-hero {
+    padding: 26px 0;
+  }
+
+  .program-page .program-page-eyebrow {
+    margin-bottom: 9px;
+    font-size: 11px;
+  }
+
+  .program-page .program-page-hero h1 {
+    font-size: 24px;
+  }
+
+  .program-page .program-page-hero-description {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .program-page .program-page-hero-actions {
+    gap: 10px;
+    margin-top: 17px;
+  }
+
+  .program-page .program-page-btn-primary,
+  .program-page .program-page-btn-secondary {
+    min-height: 42px;
+    padding: 10px 16px;
+  }
+
+  .program-page .program-page-section,
+  .program-page .program-page-extracurricular-section {
+    padding: 28px 0;
+  }
+
+  .program-page .program-page-section-heading {
+    margin-bottom: 20px;
+  }
+
+  .program-page .program-page-section-label {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .program-page .program-page-section-heading h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+
+  .program-page
+    .program-page-section-heading
+    > p:not(.program-page-section-label) {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .program-page .program-page-grid,
+  .program-page .program-page-extra-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .program-page .program-page-card,
+  .program-page .program-page-extra-card {
+    padding: 18px;
+  }
+
+  .program-page .program-page-card h3,
+  .program-page .program-page-extra-heading h3 {
+    font-size: 16px;
+  }
+
+  .program-page .program-page-card-description,
+  .program-page .program-page-extra-list li {
+    font-size: 13px;
+  }
+
+  .program-page .program-page-extra-note {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 400px) {
+  .program-page {
+    --container-padding: 16px;
+  }
+
+  .program-page .program-page-hero h1 {
+    font-size: 22px;
+  }
+
+  .program-page .program-page-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .program-page .program-page-card,
+  .program-page .program-page-extra-card {
+    padding: 16px;
+  }
+
+  .program-page .program-page-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .program-page .program-page-btn-primary,
+  .program-page .program-page-btn-secondary {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .program-page .program-page-card,
+  .program-page .program-page-btn-primary,
+  .program-page .program-page-btn-secondary {
+    transition: none;
+  }
+
+  .program-page .program-page-card:hover,
+  .program-page .program-page-btn-primary:hover,
+  .program-page .program-page-btn-secondary:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   REVISI LAYOUT HALAMAN PROGRAM
+   HERO PROPORSIONAL, TIDAK MIMPES
+   KHUSUS .program-page
+========================================= */
+
+/* HERO: TIDAK TERLALU TINGGI */
+.program-page .program-page-hero {
+  min-height: auto;
+  padding: 30px 0 32px;
+}
+
+/* JUDUL TETAP BESAR */
+.program-page .program-page-hero h1 {
+  max-width: 1000px;
+  margin: 0 0 14px;
+
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* PARAGRAF NYAMAN DIBACA */
+.program-page .program-page-hero-description {
+  max-width: 900px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* TOMBOL TETAP PROPORSIONAL */
+.program-page .program-page-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.program-page .program-page-btn-primary,
+.program-page .program-page-btn-secondary {
+  min-height: 42px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* =========================================
+   PROGRAM UNGGULAN
+========================================= */
+
+.program-page .program-page-section {
+  padding: 26px 0 36px;
+}
+
+.program-page .program-page-section-heading {
+  margin-bottom: 20px;
+}
+
+.program-page .program-page-section-heading h2 {
+  font-size: 28px;
+}
+
+/* GRID 3 KOLOM TETAP LEGA */
+.program-page .program-page-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* KARTU TIDAK DIPERKECIL BERLEBIHAN */
+.program-page .program-page-card {
+  padding: 18px;
+}
+
+.program-page .program-page-card h3 {
+  font-size: 16px;
+}
+
+.program-page .program-page-card-description {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .program-page .program-page-hero h1 {
+    font-size: 28px;
+  }
+
+  .program-page .program-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .program-page .program-page-hero {
+    padding: 24px 0;
+  }
+
+  .program-page .program-page-hero h1 {
+    font-size: 24px;
+  }
+
+  .program-page .program-page-hero-description {
+    font-size: 13px;
+  }
+
+  .program-page .program-page-section {
+    padding: 24px 0;
+  }
+
+  .program-page .program-page-section-heading h2 {
+    font-size: 23px;
+  }
+
+  .program-page .program-page-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .program-page .program-page-card {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   FINAL POLISH - LEBIH LEGA & SEIMBANG
+========================================= */
+
+/* HERO UTAMA */
+.program-page .program-page-hero {
+  padding-top: 115px;
+  padding-bottom: 125px;
+}
+
+.program-page .program-page-eyebrow {
+  margin-bottom: 16px;
+}
+
+.program-page .program-page-hero h1 {
+  margin-bottom: 20px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+}
+
+.program-page .program-page-hero-description {
+  line-height: 1.85;
+  letter-spacing: 0.1px;
+}
+
+.program-page .program-page-hero-actions {
+  margin-top: 26px;
+  gap: 14px;
+}
+
+/* PROGRAM UNGGULAN */
+.program-page .program-page-section {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.program-page .program-page-section-heading {
+  margin-bottom: 28px;
+}
+
+/* EKSTRAKURIKULER */
+.program-page .program-page-extracurricular-section {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .program-page .program-page-hero {
+    padding-top: 85px;
+    padding-bottom: 95px;
+  }
+
+  .program-page .program-page-section,
+  .program-page .program-page-extracurricular-section {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .program-page .program-page-hero {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .program-page .program-page-hero h1 {
+    line-height: 1.3;
+  }
+
+  .program-page .program-page-hero-description {
+    line-height: 1.7;
+  }
+
+  .program-page .program-page-hero-actions {
+    margin-top: 20px;
+  }
+
+  .program-page .program-page-section,
+  .program-page .program-page-extracurricular-section {
+    padding-top: 52px;
+    padding-bottom: 62px;
+  }
+}

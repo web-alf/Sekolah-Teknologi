@@ -1,0 +1,27 @@
+
+---
+import MainLayout from "../../components/layout/MainLayout.astro";
+import Jenjang from "../../components/pages/Jenjang.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { level1: "sd" } },
+    { params: { level1: "smp" } },
+    { params: { level1: "sma" } },
+  ];
+}
+
+const { level1 } = Astro.params;
+
+const titles: Record<string, string> = {
+  sd: "SD — Explore",
+  smp: "SMP — Create",
+  sma: "SMA — Innovate",
+};
+
+const title = titles[level1 ?? "sd"] ?? titles.sd;
+---
+
+<MainLayout title={`${title} | Sekolah Teknologi Alfatihah`}>
+  <Jenjang />
+</MainLayout>

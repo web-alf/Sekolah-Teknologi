@@ -1,0 +1,235 @@
+
+---
+import "../../styles/components/program-section.css";
+
+// ===================================
+// TIPE DATA PROGRAM
+// ===================================
+
+type ProgramIcon =
+  | "code"
+  | "robot"
+  | "monitor"
+  | "atom"
+  | "book"
+  | "globe"
+  | "briefcase"
+  | "heart";
+
+type ProgramColor = "blue" | "pink" | "orange";
+
+interface Program {
+  title: string;
+  description: string;
+  icon: ProgramIcon;
+  color: ProgramColor;
+}
+
+// ===================================
+// DATA 8 PROGRAM UNGGULAN
+// ===================================
+
+const programs: Program[] = [
+  {
+    title: "Coding & Computational Thinking",
+    description:
+      "Dari blok visual di SD hingga bahasa pemrograman sungguhan di SMP–SMA.",
+    icon: "code",
+    color: "pink",
+  },
+  {
+    title: "Robotika & Elektronika",
+    description:
+      "Merakit, memprogram, dan menguji robot serta perangkat sederhana.",
+    icon: "robot",
+    color: "orange",
+  },
+  {
+    title: "Desain & Media Digital",
+    description:
+      "Desain grafis, video, animasi, dan konten kreatif yang bertanggung jawab.",
+    icon: "monitor",
+    color: "blue",
+  },
+  {
+    title: "Sains Eksperimental",
+    description:
+      "Praktikum dan eksperimen nyata, bukan hanya teori di papan tulis.",
+    icon: "atom",
+    color: "pink",
+  },
+  {
+    title: "Tahfidz & Tahsin",
+    description:
+      "Target hafalan bertahap per jenjang dengan bimbingan harian.",
+    icon: "book",
+    color: "blue",
+  },
+  {
+    title: "English for Tech",
+    description:
+      "Bahasa Inggris aktif untuk membaca dokumentasi dan presentasi.",
+    icon: "globe",
+    color: "blue",
+  },
+  {
+    title: "Kewirausahaan Digital",
+    description:
+      "Dari ide menjadi produk kecil yang benar-benar dijual, mulai jenjang SMP.",
+    icon: "briefcase",
+    color: "orange",
+  },
+  {
+    title: "Proyek Sosial Berdampak",
+    description:
+      "Setiap semester satu proyek yang menyelesaikan masalah nyata di sekitar sekolah.",
+    icon: "heart",
+    color: "pink",
+  },
+];
+
+// ===================================
+// DATA SVG ICON
+// ===================================
+
+const iconPaths: Record<ProgramIcon, string[]> = {
+  code: [
+    "m8 8-4 4 4 4",
+    "m16 8 4 4-4 4",
+    "m14 4-4 16",
+  ],
+
+  robot: [
+    "M4 8h16v12H4z",
+    "M12 4v4",
+    "M9 4h6",
+    "M4 13H2",
+    "M22 13h-2",
+    "M9 17h6",
+  ],
+
+  monitor: [
+    "M3 4h18v13H3z",
+    "M8 21h8",
+    "M12 17v4",
+  ],
+
+  atom: [
+    "M12 3c4 0 8 4 8 9s-4 9-8 9-8-4-8-9 4-9 8-9Z",
+    "M3 12h18",
+    "M12 3c3 3 4 6 4 9s-1 6-4 9",
+    "M12 3c-3 3-4 6-4 9s1 6 4 9",
+  ],
+
+  book: [
+    "M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Z",
+    "M12 6v14",
+  ],
+
+  globe: [
+    "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
+    "M3 12h18",
+    "M12 3c3 3 4 6 4 9s-1 6-4 9",
+    "M12 3c-3 3-4 6-4 9s1 6 4 9",
+  ],
+
+  briefcase: [
+    "M3 7h18v14H3z",
+    "M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2",
+    "M3 13c5 3 13 3 18 0",
+  ],
+
+  heart: [
+    "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z",
+  ],
+};
+---
+
+<!-- ===================================
+     SECTION PROGRAM UNGGULAN
+=================================== -->
+
+<section
+  id="program-unggulan"
+  class="program-section"
+  aria-labelledby="program-title"
+>
+  <div class="program-container">
+
+    <!-- HEADER SECTION -->
+    <div class="program-heading">
+
+      <p class="program-eyebrow">
+        PROGRAM UNGGULAN
+      </p>
+
+
+<h2 id="program-title">
+  Yang Dipelajari Anak{" "}
+  <span>Setiap Minggu</span>
+</h2>
+
+
+      <p class="program-intro">
+        Materi disusun bertahap, praktis, dan relevan
+        dengan dunia nyata. Setiap siswa mendapatkan
+        pengalaman belajar yang menyenangkan
+        dan bermakna.
+      </p>
+
+    </div>
+
+    <!-- GRID 8 PROGRAM -->
+    <div class="program-grid">
+
+      {programs.map((program) => (
+        <article
+          class={`program-card program-card--${program.color}`}
+        >
+
+          <!-- IKON DAN JUDUL -->
+          <div class="program-card-heading">
+
+            <div
+              class="program-icon"
+              aria-hidden="true"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {iconPaths[program.icon].map((path) => (
+                  <path d={path} />
+                ))}
+              </svg>
+            </div>
+
+            <h3>{program.title}</h3>
+
+          </div>
+
+          <!-- DESKRIPSI -->
+          <p class="program-description">
+            {program.description}
+          </p>
+
+        </article>
+      ))}
+
+    </div>
+
+
+<!-- TOMBOL LIHAT SEMUA PROGRAM -->
+<div class="program-actions">
+  <a href="/#program" class="program-button">
+    Lihat Semua Program
+    <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+  </div>
+</section>

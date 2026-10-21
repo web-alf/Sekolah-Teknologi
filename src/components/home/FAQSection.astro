@@ -1,0 +1,127 @@
+
+---
+import "../../styles/components/faq-section.css";
+
+interface FAQ {
+  question: string;
+  answer: string;
+  requiresPermit?: boolean;
+}
+
+// Ubah menjadi true HANYA setelah izin operasional terbit.
+const izinOperasionalTerbit = false;
+
+const faqItems: FAQ[] = [
+  {
+    question: "Apa itu Sekolah Teknologi?",
+    answer:
+      "Sekolah formal jenjang SD, SMP, dan SMA yang memadukan penguasaan teknologi, kurikulum nasional, dan pendidikan Al-Qur’an dalam satu perjalanan belajar terpadu.",
+  },
+  {
+    question: "Apakah ini sekolah asrama?",
+    answer:
+      "Tidak. Sekolah Teknologi adalah sekolah harian (non-asrama). Siswa pulang setiap hari dan orang tua tetap menjadi pendidik utama di rumah.",
+  },
+  {
+    question: "Apakah anak harus sudah bisa komputer untuk masuk SD?",
+    answer:
+      "Tidak. Di jenjang SD kami mulai dari nol dengan bermain, bercerita, dan eksperimen sederhana. Yang kami cari adalah rasa ingin tahu, bukan kemampuan awal.",
+  },
+  {
+    question: "Apakah ijazahnya diakui?",
+    answer:
+      "Sekolah Teknologi mengikuti kurikulum nasional dan proses perizinan pada instansi berwenang, sehingga siswa memperoleh ijazah yang berlaku untuk melanjutkan ke jenjang berikutnya.",
+    requiresPermit: true,
+  },
+  {
+    question: "Berapa lama waktu belajar per hari?",
+    answer:
+      "Kegiatan belajar berlangsung [hari] hingga [hari], pukul [jam] sampai [jam], termasuk kelas teknologi, tahfidz, dan istirahat.",
+  },
+  {
+    question: "Bagaimana cara mendaftar?",
+    answer:
+      "Isi formulir di halaman Pendaftaran atau hubungi admin via WhatsApp. Tim kami akan memandu langkah berikutnya, termasuk jadwal observasi dan wawancara orang tua.",
+  },
+];
+
+// FAQ ijazah tidak ditampilkan sebelum izin operasional terbit.
+const visibleFaqs = faqItems.filter(
+  (item) => !item.requiresPermit || izinOperasionalTerbit
+);
+
+// Susunan mengikuti screenshot:
+// Kiri: pertanyaan 1, 2, 3
+// Kanan: pertanyaan 4, 5, 6
+const leftFaqs = visibleFaqs.slice(0, 3);
+const rightFaqs = visibleFaqs.slice(3);
+---
+
+<section class="faq-section" aria-labelledby="faq-title">
+  <div class="faq-container">
+
+    <!-- HEADER -->
+    <div class="faq-heading">
+
+      <div class="faq-heading-left">
+        <p class="faq-eyebrow">
+          PERTANYAAN UMUM
+        </p>
+
+        <h2 id="faq-title">
+          Yang Sering Ditanyakan {""}
+          <span>Ayah Bunda</span>
+        </h2>
+      </div>
+
+      <p class="faq-intro">
+        Berikut beberapa pertanyaan yang paling sering kami terima.
+        Jika ada pertanyaan lain, silakan hubungi kami melalui
+        WhatsApp.
+      </p>
+
+    </div>
+
+    <!-- GRID DUA KOLOM -->
+    <div class="faq-grid">
+
+      <!-- KOLOM KIRI -->
+      <div class="faq-column">
+        {leftFaqs.map((faq) => (
+          <details class="faq-item">
+
+            <summary class="faq-question">
+              <span>{faq.question}</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+
+          </details>
+        ))}
+      </div>
+
+      <!-- KOLOM KANAN -->
+      <div class="faq-column">
+        {rightFaqs.map((faq) => (
+          <details class="faq-item">
+
+            <summary class="faq-question">
+              <span>{faq.question}</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+
+          </details>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,472 @@
+
+/* =========================================
+   TENTANG KAMI SECTION - BERANDA
+   FULL REVISI
+========================================= */
+
+/* SECTION UTAMA */
+
+.home-about {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  min-height: calc(100dvh - 50px);
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 75px 0 100px;
+
+  background: #f2faff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.home-about,
+.home-about * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.home-about-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* =========================================
+   BAGIAN TEKS
+========================================= */
+
+.home-about-content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+/* =========================================
+   LABEL PINK
+   LATAR BELAKANG DAN PERJALANAN
+========================================= */
+
+.home-about-label {
+  margin: 0 0 18px;
+  padding: 0;
+
+  color: #d41491;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   JUDUL UTAMA
+   SAMA DENGAN SECTION LAIN
+========================================= */
+
+.home-about .home-about-content h2 {
+  width: 100%;
+  max-width: 750px;
+
+  margin: 0 0 14px;
+  padding: 0;
+
+  color: #102b50;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+/* WARNA BIRU PADA JUDUL */
+
+.home-about .home-about-content h2 span {
+  display: inline;
+  color: #008dd2;
+}
+
+/* =========================================
+   PARAGRAF DESKRIPSI
+========================================= */
+
+.home-about-description {
+  max-width: 750px;
+
+  margin: 0 0 32px;
+  padding: 0;
+
+  color: #52667b;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* =========================================
+   TOMBOL TENTANG KAMI
+========================================= */
+
+.home-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 15px 25px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #d41491;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* HOVER TOMBOL */
+
+.home-about-button:hover {
+  background: #af0f76;
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 24px rgba(212, 20, 145, 0.2);
+}
+
+/* PANAH TOMBOL */
+
+.home-about-button span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* FOCUS KEYBOARD */
+
+.home-about-button:focus-visible {
+  outline: 3px solid #008dd2;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   DEKORASI VISUAL
+========================================= */
+
+.home-about-visual {
+  position: relative;
+
+  width: 100%;
+  min-height: 320px;
+}
+
+/* LINGKARAN BIRU */
+
+.home-about-circle {
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+
+  width: 220px;
+  height: 220px;
+
+  border: 26px solid #008dd2;
+  border-radius: 50%;
+}
+
+/* KOTAK PINK */
+
+.home-about-square {
+  position: absolute;
+
+  top: 95px;
+  right: 5px;
+
+  width: 165px;
+  height: 165px;
+
+  border: 23px solid #d41491;
+  border-radius: 30px;
+
+  transform: rotate(35deg);
+}
+
+/* LINGKARAN ORANYE */
+
+.home-about-small-circle {
+  position: absolute;
+
+  bottom: 0;
+  left: 65px;
+
+  width: 95px;
+  height: 95px;
+
+  border: 19px solid #ff8a1e;
+  border-radius: 50%;
+}
+
+/* =========================================
+   VISI
+   JIKA HTML MENGGUNAKAN .visi-text
+========================================= */
+
+.visi-text {
+  position: relative;
+
+  left: 25px;
+  max-width: calc(100% - 25px);
+
+  text-transform: uppercase;
+
+  color: #102b50;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MISI
+   JIKA HTML MENGGUNAKAN .misi-section
+========================================= */
+
+.misi-section {
+  position: relative;
+  top: -30px;
+}
+
+/* =========================================
+   NIAT INTI
+   JIKA HTML MENGGUNAKAN .niat-inti-section
+========================================= */
+
+.niat-inti-section {
+  position: relative;
+  top: -40px;
+}
+
+/* =========================================
+   FILOSOFI EXPLORE-CREATE-INNOVATE
+   JIKA HTML MENGGUNAKAN .filosofi-section
+========================================= */
+
+.filosofi-section {
+  position: relative;
+  top: -40px;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .home-about {
+    min-height: auto;
+
+    padding: 75px 0 85px;
+  }
+
+  .home-about-container {
+    padding: 0 24px;
+
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* DEKORASI DISEMBUNYIKAN */
+
+  .home-about-visual {
+    display: none;
+  }
+
+  /* LABEL */
+
+  .home-about-label {
+    font-size: 14px;
+  }
+
+  /* JUDUL TABLET */
+
+  .home-about .home-about-content h2 {
+    max-width: 100%;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  /* DESKRIPSI */
+
+  .home-about-description {
+    max-width: 100%;
+  }
+
+  /* VISI */
+
+  .visi-text {
+    left: 15px;
+    max-width: calc(100% - 15px);
+    font-size: 14px;
+  }
+
+  /* MISI */
+
+  .misi-section {
+    top: -20px;
+  }
+
+  /* NIAT INTI */
+
+  .niat-inti-section {
+    top: -25px;
+  }
+
+  /* FILOSOFI */
+
+  .filosofi-section {
+    top: -25px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .home-about {
+    min-height: auto;
+
+    padding: 55px 0 65px;
+  }
+
+  .home-about-container {
+    padding: 0 20px;
+  }
+
+  /* LABEL MOBILE */
+
+  .home-about-label {
+    font-size: 13px;
+    letter-spacing: 1.2px;
+  }
+
+  /* JUDUL MOBILE */
+
+  .home-about .home-about-content h2 {
+    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  /* DESKRIPSI MOBILE */
+
+  .home-about-description {
+    max-width: 100%;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  /* TOMBOL MOBILE */
+
+  .home-about-button {
+    width: 100%;
+
+    padding: 16px 20px;
+  }
+
+  /* VISI MOBILE */
+
+  .visi-text {
+    left: 0;
+    max-width: 100%;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* MISI MOBILE */
+
+  .misi-section {
+    top: -15px;
+  }
+
+  /* NIAT INTI MOBILE */
+
+  .niat-inti-section {
+    top: -15px;
+  }
+
+  /* FILOSOFI MOBILE */
+
+  .filosofi-section {
+    top: -15px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 400px) {
+
+  .home-about-container {
+    padding: 0 20px;
+  }
+
+  .home-about .home-about-content h2 {
+    font-size: 22px;
+  }
+
+  .home-about-button {
+    padding: 14px 18px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS ANIMASI
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .home-about-button {
+    transition: none;
+  }
+}

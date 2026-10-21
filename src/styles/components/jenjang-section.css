@@ -1,0 +1,475 @@
+
+/* =========================================
+   JENJANG SEKOLAH TEKNOLOGI
+   HOMEPAGE - FULL HEIGHT RESPONSIVE
+========================================= */
+
+/* =========================================
+   SECTION UTAMA
+========================================= */
+
+.jenjang-section {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  min-height: calc(100dvh - 50px);
+
+  margin: 0;
+  padding: 50px 0;
+
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.jenjang-section *,
+.jenjang-section *::before,
+.jenjang-section *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.jenjang-section .jenjang-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* =========================================
+   HEADER SECTION
+========================================= */
+
+.jenjang-heading {
+  max-width: 850px;
+  margin: 0 0 28px;
+  text-align: left;
+}
+
+/* LABEL KECIL */
+
+.jenjang-heading .jenjang-eyebrow {
+  margin: 0 0 12px;
+
+  color: #d41491;
+
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* JUDUL UTAMA */
+
+.jenjang-heading h2 {
+  max-width: 100%;
+
+  margin: 0 0 14px;
+  padding: 0;
+
+  color: #102b50;
+
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+
+.jenjang-heading h2 span {
+  color: #008dd2;
+}
+
+/* PARAGRAF */
+
+.jenjang-heading .jenjang-intro {
+  max-width: 780px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #52667b;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================
+   GRID JENJANG
+========================================= */
+
+.jenjang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  align-items: stretch;
+}
+
+/* =========================================
+   KARTU JENJANG
+========================================= */
+
+.jenjang-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4edf5;
+  border-radius: 18px;
+
+  box-shadow: 0 6px 24px rgba(16, 43, 80, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.jenjang-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(16, 43, 80, 0.1);
+}
+
+/* =========================================
+   BAGIAN ATAS KARTU
+========================================= */
+
+.jenjang-card-top {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* IKON */
+
+.jenjang-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: #eaf7ff;
+  color: #008dd2;
+}
+
+.jenjang-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* =========================================
+   IDENTITAS KARTU
+========================================= */
+
+.jenjang-card-identity {
+  min-width: 0;
+}
+
+.jenjang-card-identity h3 {
+  margin: 0 0 5px;
+
+  color: #102b50;
+
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.jenjang-class {
+  display: inline-block;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================================
+   DESKRIPSI
+========================================= */
+
+.jenjang-description {
+  flex-grow: 1;
+
+  margin: 0 0 20px;
+
+  color: #52667b;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================
+   LINK LIHAT JENJANG
+========================================= */
+
+.jenjang-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+
+  gap: 8px;
+
+  margin-top: auto;
+  padding: 0;
+
+  color: #008dd2;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.jenjang-link:hover {
+  gap: 12px;
+  color: #006fa8;
+}
+
+.jenjang-link span {
+  font-size: 18px;
+}
+
+/* =========================================
+   WARNA KARTU SD
+========================================= */
+
+.jenjang-card--blue {
+  border-top: 4px solid #008dd2;
+}
+
+.jenjang-card--blue .jenjang-icon {
+  background: #eaf7ff;
+  color: #008dd2;
+}
+
+.jenjang-card--blue .jenjang-link {
+  color: #008dd2;
+}
+
+/* =========================================
+   WARNA KARTU SMP
+========================================= */
+
+.jenjang-card--pink {
+  border-top: 4px solid #d41491;
+}
+
+.jenjang-card--pink .jenjang-icon {
+  background: #fff0f8;
+  color: #d41491;
+}
+
+.jenjang-card--pink .jenjang-link {
+  color: #d41491;
+}
+
+/* =========================================
+   WARNA KARTU SMA
+========================================= */
+
+.jenjang-card--orange {
+  border-top: 4px solid #f59e0b;
+}
+
+.jenjang-card--orange .jenjang-icon {
+  background: #fff7e6;
+  color: #e58b00;
+}
+
+.jenjang-card--orange .jenjang-link {
+  color: #e58b00;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .jenjang-section {
+    min-height: auto;
+    padding: 55px 0;
+  }
+
+  .jenjang-section .jenjang-container {
+    padding: 0 24px;
+  }
+
+  .jenjang-heading {
+    margin-bottom: 24px;
+  }
+
+  .jenjang-heading h2 {
+    font-size: clamp(22px, 2.5vw, 26px);
+  }
+
+  .jenjang-grid {
+    gap: 14px;
+  }
+
+  .jenjang-card {
+    padding: 20px;
+  }
+
+  .jenjang-card-top {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .jenjang-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .jenjang-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .jenjang-card-identity h3 {
+    font-size: 16px;
+  }
+
+  .jenjang-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .jenjang-section {
+    min-height: auto;
+    padding: 45px 0;
+  }
+
+  .jenjang-section .jenjang-container {
+    padding: 0 20px;
+  }
+
+  .jenjang-heading {
+    margin-bottom: 22px;
+  }
+
+  .jenjang-heading .jenjang-eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .jenjang-heading h2 {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .jenjang-heading .jenjang-intro {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .jenjang-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .jenjang-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .jenjang-card-top {
+    margin-bottom: 14px;
+  }
+
+  .jenjang-card-identity h3 {
+    font-size: 17px;
+  }
+
+  .jenjang-description {
+    margin-bottom: 16px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .jenjang-link {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 420px) {
+  .jenjang-heading h2 {
+    font-size: 20px;
+  }
+
+  .jenjang-card {
+    padding: 18px;
+  }
+
+  .jenjang-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .jenjang-card,
+  .jenjang-link {
+    transition: none;
+  }
+
+  .jenjang-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,724 @@
+
+/* =========================================
+   JENJANG & KURIKULUM
+   COMPACT - FULL RESPONSIVE
+========================================= */
+
+/* PENGATURAN UTAMA */
+
+.jenjang-page {
+  --container-width: 1280px;
+  --container-padding: 40px;
+
+  --text-primary: #102b50;
+  --text-secondary: #52667b;
+  --blue: #008dd2;
+  --pink: #d41491;
+  --border: #e3edf5;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+
+  background: #ffffff;
+  color: var(--text-primary);
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.jenjang-page *,
+.jenjang-page *::before,
+.jenjang-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.jenjang-page .jenjang-container {
+  width: 100%;
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* =========================================
+   HERO JENJANG
+========================================= */
+
+.jenjang-page .jenjang-hero {
+  width: 100%;
+  padding: 26px 0;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #f2faff 100%
+  );
+}
+
+/* LABEL ATAS */
+
+.jenjang-page .jenjang-eyebrow {
+  margin: 0 0 9px;
+
+  color: var(--pink);
+
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* JUDUL UTAMA - TETAP 28PX */
+
+.jenjang-page .jenjang-hero h1 {
+  max-width: 100%;
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.jenjang-page .jenjang-hero h1 span {
+  color: var(--blue);
+}
+
+/* ALUR FASE TETAP DISEMBUNYIKAN
+   SESUAI CSS SEBELUMNYA */
+
+.jenjang-page .jenjang-phases {
+  display: none;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.jenjang-page .jenjang-content {
+  width: 100%;
+  padding: 24px 0 34px;
+}
+
+/* =========================================
+   TAB SD / SMP / SMA
+========================================= */
+
+.jenjang-page .jenjang-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.jenjang-page .jenjang-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 0;
+  min-height: 50px;
+
+  padding: 10px 14px;
+
+  border: 1px solid #e1eaf2;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: var(--text-primary);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jenjang-page .jenjang-tab span {
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.jenjang-page .jenjang-tab:hover {
+  border-color: var(--blue);
+  background: #f5fbff;
+}
+
+.jenjang-page .jenjang-tab.active,
+.jenjang-page .jenjang-tab[aria-selected="true"] {
+  border-color: var(--blue);
+
+  background: #edf8ff;
+  color: var(--blue);
+
+  box-shadow: 0 3px 12px rgba(0, 141, 210, 0.07);
+}
+
+.jenjang-page .jenjang-tab.active span,
+.jenjang-page .jenjang-tab[aria-selected="true"] span {
+  color: var(--blue);
+}
+
+.jenjang-page .jenjang-tab:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PANEL KURIKULUM
+========================================= */
+
+.jenjang-page .jenjang-panel {
+  width: 100%;
+  padding: 20px 22px;
+
+  border: 1px solid #e4edf5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 22px rgba(16, 43, 80, 0.04);
+}
+
+.jenjang-page .jenjang-panel[hidden] {
+  display: none !important;
+}
+
+/* =========================================
+   INTRO SD / SMP / SMA
+========================================= */
+
+.jenjang-page .jenjang-intro {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+/* LABEL JENJANG */
+
+.jenjang-page .jenjang-level {
+  margin: 0 0 7px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* JUDUL KONTEN
+   LEBIH KECIL DARI JUDUL UTAMA */
+
+.jenjang-page .jenjang-intro h2 {
+  max-width: 900px;
+
+  margin: 0 0 10px;
+
+  color: var(--text-primary);
+
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.35px;
+}
+
+/* DESKRIPSI JENJANG */
+
+.jenjang-page .jenjang-intro > p:last-child {
+  max-width: 1000px;
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* =========================================
+   KARTU TABEL KURIKULUM
+========================================= */
+
+.jenjang-page .jenjang-table-card {
+  width: 100%;
+  overflow: hidden;
+
+  margin: 0 0 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  background: #ffffff;
+}
+
+/* JUDUL TABEL */
+
+.jenjang-page .jenjang-table-card h3 {
+  margin: 0;
+  padding: 12px 16px;
+
+  color: var(--text-primary);
+
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* WRAPPER SCROLL */
+
+.jenjang-page .jenjang-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABEL */
+
+.jenjang-page .jenjang-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* ISI SEL */
+
+.jenjang-page .jenjang-table th,
+.jenjang-page .jenjang-table td {
+  padding: 10px 14px;
+
+  border-top: 1px solid #e7eef5;
+
+  color: var(--text-secondary);
+
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.55;
+
+  text-align: left;
+  vertical-align: top;
+}
+
+/* HEADER TABEL */
+
+.jenjang-page .jenjang-table thead th {
+  background: #f2faff;
+
+  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+/* KOLOM AREA BELAJAR */
+
+.jenjang-page .jenjang-table tbody th {
+  width: 23%;
+
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* WARNA SELANG-SELING */
+
+.jenjang-page .jenjang-table tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+/* CATATAN BAWAH TABEL */
+
+.jenjang-page .jenjang-table-card > p {
+  margin: 0;
+  padding: 11px 16px;
+
+  border-top: 1px solid #e7eef5;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.jenjang-page .jenjang-table-card small {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* =========================================
+   GRID INFORMASI BAWAH
+========================================= */
+
+.jenjang-page .jenjang-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* HINDARI JARAK GANDA SETELAH TABEL */
+
+.jenjang-page .jenjang-table-card + .jenjang-bottom-grid {
+  margin-top: 0;
+}
+
+/* =========================================
+   KARTU INFORMASI
+========================================= */
+
+.jenjang-page .jenjang-info-card {
+  min-width: 0;
+  height: 100%;
+
+  padding: 18px;
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+
+  background: #f8fcff;
+}
+
+/* JUDUL KARTU */
+
+.jenjang-page .jenjang-info-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--text-primary);
+
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* =========================================
+   ALUR HARI BELAJAR
+========================================= */
+
+.jenjang-page .jenjang-schedule {
+  margin: 0;
+  padding: 0 0 0 21px;
+}
+
+.jenjang-page .jenjang-schedule li {
+  padding: 0 0 8px 5px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.jenjang-page .jenjang-schedule li:last-child {
+  padding-bottom: 0;
+}
+
+.jenjang-page .jenjang-schedule li::marker {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+/* JAM OPERASIONAL */
+
+.jenjang-page .jenjang-hours {
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+
+  border-top: 1px solid #e1eaf2;
+
+  color: var(--blue);
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+/* =========================================
+   PROFIL LULUSAN
+========================================= */
+
+.jenjang-page .jenjang-check-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jenjang-page .jenjang-check-list li {
+  position: relative;
+
+  margin: 0 0 10px;
+  padding-left: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.jenjang-page .jenjang-check-list li::before {
+  content: "✓";
+
+  position: absolute;
+  top: 1px;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.jenjang-page .jenjang-check-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   KARTU SATU KOLOM
+========================================= */
+
+.jenjang-page .jenjang-single-card {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .jenjang-page {
+    --container-padding: 24px;
+  }
+
+  .jenjang-page .jenjang-hero {
+    padding: 24px 0;
+  }
+
+  .jenjang-page .jenjang-hero h1 {
+    font-size: 24px;
+  }
+
+  .jenjang-page .jenjang-content {
+    padding: 22px 0 30px;
+  }
+
+  .jenjang-page .jenjang-tabs {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .jenjang-page .jenjang-tab {
+    flex-direction: column;
+    gap: 4px;
+    padding: 9px;
+    text-align: center;
+  }
+
+  .jenjang-page .jenjang-panel {
+    padding: 18px;
+  }
+
+  .jenjang-page .jenjang-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .jenjang-page .jenjang-info-card {
+    padding: 17px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .jenjang-page {
+    --container-padding: 20px;
+  }
+
+  .jenjang-page .jenjang-hero {
+    padding: 20px 0;
+  }
+
+  .jenjang-page .jenjang-hero h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .jenjang-page .jenjang-eyebrow {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .jenjang-page .jenjang-content {
+    padding: 18px 0 26px;
+  }
+
+  /* TAB */
+
+  .jenjang-page .jenjang-tabs {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .jenjang-page .jenjang-tab {
+    min-height: 48px;
+    padding: 8px 5px;
+    font-size: 15px;
+  }
+
+  .jenjang-page .jenjang-tab span {
+    font-size: 10px;
+  }
+
+  /* PANEL */
+
+  .jenjang-page .jenjang-panel {
+    padding: 15px 14px;
+    border-radius: 13px;
+  }
+
+  /* INTRO */
+
+  .jenjang-page .jenjang-intro {
+    margin-bottom: 15px;
+  }
+
+  .jenjang-page .jenjang-level {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .jenjang-page .jenjang-intro h2 {
+    margin-bottom: 9px;
+    font-size: 19px;
+  }
+
+  .jenjang-page .jenjang-intro > p:last-child {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  /* TABEL */
+
+  .jenjang-page .jenjang-table-card {
+    margin-bottom: 12px;
+  }
+
+  .jenjang-page .jenjang-table-card h3 {
+    padding: 11px 13px;
+    font-size: 15px;
+  }
+
+  .jenjang-page .jenjang-table {
+    min-width: 580px;
+  }
+
+  .jenjang-page .jenjang-table th,
+  .jenjang-page .jenjang-table td {
+    padding: 9px 11px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .jenjang-page .jenjang-table-card > p {
+    padding: 10px 13px;
+    font-size: 11.5px;
+  }
+
+  /* KARTU INFORMASI */
+
+  .jenjang-page .jenjang-bottom-grid {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .jenjang-page .jenjang-table-card + .jenjang-bottom-grid {
+    margin-top: 0;
+  }
+
+  .jenjang-page .jenjang-info-card {
+    padding: 15px;
+  }
+
+  .jenjang-page .jenjang-info-card h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .jenjang-page .jenjang-schedule li,
+  .jenjang-page .jenjang-check-list li {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .jenjang-page .jenjang-hours {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 380px) {
+  .jenjang-page {
+    --container-padding: 16px;
+  }
+
+  .jenjang-page .jenjang-tab {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  .jenjang-page .jenjang-tab span {
+    font-size: 10px;
+  }
+
+  .jenjang-page .jenjang-panel {
+    padding: 13px 12px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .jenjang-page .jenjang-tab {
+    transition: none;
+  }
+}

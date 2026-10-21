@@ -1,0 +1,649 @@
+
+---
+import "../../styles/pages/jenjang.css";
+
+const sdCurriculum = [
+  {
+    area: "Akademik inti",
+    early:
+      "Literasi, numerasi, IPAS, Pendidikan Agama Islam, PPKn, seni, olahraga sesuai kurikulum nasional",
+    late:
+      "Pendalaman literasi–numerasi, IPAS berbasis eksperimen, bahasa Inggris aktif",
+  },
+  {
+    area: "Computational thinking",
+    early:
+      "Pola, urutan, dan algoritma lewat permainan tanpa layar (unplugged) dan blok visual",
+    late:
+      "Pemrograman blok (proyek game dan animasi), pengenalan logika kondisional dan variabel",
+  },
+  {
+    area: "Sains & rekayasa",
+    early:
+      "Eksperimen sederhana, rakitan sederhana, pengamatan alam",
+    late:
+      "Robotika dasar, rangkaian listrik sederhana, proyek sains mini",
+  },
+  {
+    area: "Literasi digital",
+    early:
+      "Aturan sehat memakai gawai, keamanan diri di internet",
+    late:
+      "Mencari informasi yang benar, etika digital, membuat presentasi dan dokumen",
+  },
+  {
+    area: "Al-Qur'an & karakter",
+    early:
+      "Tahsin harian, target hafalan [juz/surah], adab makan–belajar–bermain",
+    late:
+      "Tahfidz lanjutan, tafsir tematik sederhana, kepemimpinan kecil di kelas",
+  },
+  {
+    area: "Proyek semester",
+    early:
+      "Satu proyek tim per semester bertema lingkungan sekolah",
+    late:
+      "Satu proyek tim per semester bertema masyarakat sekitar",
+  },
+];
+
+const smpCurriculum = [
+  {
+    area: "Akademik inti",
+    content:
+      "Seluruh mata pelajaran kurikulum nasional jenjang SMP dengan pendekatan proyek dan integrasi teknologi",
+  },
+  {
+    area: "Pemrograman",
+    content:
+      "Bahasa pemrograman teks (misalnya Python) untuk logika, data, dan otomasi sederhana; pengembangan web dasar (HTML, CSS, JavaScript)",
+  },
+  {
+    area: "Produk digital",
+    content:
+      "Desain antarmuka, prototyping, dan pengujian pengguna; produksi video dan konten kreatif yang bertanggung jawab",
+  },
+  {
+    area: "Sains & data",
+    content:
+      "Praktikum IPA berbasis data, pengolahan data sederhana dengan spreadsheet dan visualisasi",
+  },
+  {
+    area: "Kewirausahaan digital",
+    content:
+      "Dari ide ke produk kecil yang benar-benar dijual: riset kebutuhan, pembuatan, pemasaran, evaluasi (Market Day tahunan)",
+  },
+  {
+    area: "Al-Qur'an & karakter",
+    content:
+      "Tahfidz dengan target [juz], kajian tematik, program kepemimpinan siswa, kegiatan sosial rutin",
+  },
+  {
+    area: "Bahasa Inggris",
+    content:
+      "English for Tech: membaca dokumentasi, menulis deskripsi proyek, presentasi dalam bahasa Inggris",
+  },
+  {
+    area: "Proyek semester",
+    content:
+      "Satu proyek berdampak per semester, dipresentasikan di hadapan orang tua dan mentor pada Exhibition Day",
+  },
+];
+
+const smaTracks = [
+  {
+    name: "Rekayasa Perangkat Lunak",
+    study:
+      "Pengembangan aplikasi web dan mobile, basis data, kerja tim dengan version control",
+    project:
+      "Aplikasi yang dipakai komunitas atau entitas mitra",
+  },
+  {
+    name: "Data & Kecerdasan Buatan",
+    study:
+      "Analisis data, dasar machine learning, etika penggunaan AI",
+    project:
+      "Riset data dengan rekomendasi untuk masalah nyata",
+  },
+  {
+    name: "Media & Desain Digital",
+    study:
+      "Produksi video, desain grafis, animasi, strategi konten",
+    project:
+      "Kampanye media untuk lembaga sosial",
+  },
+  {
+    name: "Bisnis Digital",
+    study:
+      "Model bisnis, pemasaran digital, keuangan dasar, legalitas usaha pemula",
+    project:
+      "Usaha rintisan dengan laporan omzet",
+  },
+];
+
+const smaCurriculum = [
+  {
+    area: "Akademik inti",
+    content:
+      "Kurikulum nasional jenjang SMA, disiapkan untuk seleksi masuk perguruan tinggi",
+  },
+  {
+    area: "Magang",
+    content:
+      "Praktik kerja [durasi] di entitas ekosistem Alfatihah & Almadinah Group atau mitra industri",
+  },
+  {
+    area: "Sertifikasi",
+    content:
+      "Kesempatan mengikuti uji sertifikasi kompetensi [nama sertifikasi]",
+  },
+  {
+    area: "Al-Qur'an & karakter",
+    content:
+      "Tahfidz target [juz], kajian, program mentoring, dan pengabdian masyarakat",
+  },
+  {
+    area: "Persiapan lanjutan",
+    content:
+      "Bimbingan pemilihan jurusan, tes masuk perguruan tinggi, dan penyusunan portofolio",
+  },
+];
+
+const sdSchedule = [
+  "Pembukaan dan tahsin pagi",
+  "Pelajaran inti",
+  "Istirahat dan salat Dhuha",
+  "Kelas eksplorasi (coding, sains, atau robotika bergiliran)",
+  "Makan siang dan salat Zuhur berjamaah",
+  "Pelajaran inti atau proyek",
+  "Penutup dan refleksi",
+];
+
+const sdGraduate = [
+  "Membaca Al-Qur'an dengan tartil dan menghafal minimal 3 juz",
+  "Menuntaskan minimal 6 proyek tim",
+  "Mampu membuat animasi atau game sederhana dengan pemrograman blok",
+  "Terbiasa bertanya, mencoba, dan mendokumentasikan hasil belajarnya",
+];
+
+const smpGraduate = [
+  "Menghafal minimal 5 juz",
+  "Membuat minimal satu aplikasi atau website fungsional",
+  "Menyelesaikan satu proyek kewirausahaan dengan transaksi nyata",
+  "Mampu mempresentasikan karya dalam bahasa Indonesia dan Inggris",
+];
+
+const smaGraduate = [
+  "Menghafal minimal 5 juz",
+  "Memiliki portofolio karya minimal tiga proyek utama",
+  "Menyelesaikan magang",
+  "Memiliki rencana pascasekolah yang terdokumentasi (kuliah, kerja, atau usaha)",
+];
+
+// Menentukan tab awal berdasarkan URL.
+const pathSegments = Astro.url.pathname
+  .replace(/\/+$/, "")
+  .toLowerCase()
+  .split("/");
+
+const lastSegment = pathSegments[pathSegments.length - 1];
+
+const initialLevel =
+  lastSegment === "smp"
+    ? "smp"
+    : lastSegment === "sma"
+      ? "sma"
+      : "sd";
+---
+
+<!-- =====================================
+     PEMBUNGKUS UTAMA
+     AGAR CSS .jenjang-page TERBACA
+===================================== -->
+
+<div class="jenjang-page">
+
+  <!-- =====================================
+       HERO JENJANG & KURIKULUM
+  ===================================== -->
+
+  <section class="jenjang-hero" id="jenjang">
+    <div class="jenjang-container">
+
+      <p class="jenjang-eyebrow">
+        JENJANG & KURIKULUM
+      </p>
+
+      <h1>
+        Tiga fase, satu <span>kurva pertumbuhan</span>
+      </h1>
+
+      <div class="jenjang-phases">
+        <span>SD — Explore</span>
+        <span class="jenjang-phase-arrow">→</span>
+        <span>SMP — Create</span>
+        <span class="jenjang-phase-arrow">→</span>
+        <span>SMA — Innovate</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================
+       KONTEN JENJANG
+  ===================================== -->
+
+  <section class="jenjang-content">
+    <div class="jenjang-container">
+
+      <!-- =====================================
+           TAB SD / SMP / SMA
+      ===================================== -->
+
+      <div
+        class="jenjang-tabs"
+        role="tablist"
+        aria-label="Pilih jenjang pendidikan"
+      >
+
+        <button
+          class:list={[
+            "jenjang-tab",
+            { active: initialLevel === "sd" }
+          ]}
+          type="button"
+          id="tab-sd"
+          data-target="sd"
+          role="tab"
+          aria-selected={initialLevel === "sd"}
+          aria-controls="panel-sd"
+          tabindex={initialLevel === "sd" ? 0 : -1}
+        >
+          SD <span>Explore</span>
+        </button>
+
+        <button
+          class:list={[
+            "jenjang-tab",
+            { active: initialLevel === "smp" }
+          ]}
+          type="button"
+          id="tab-smp"
+          data-target="smp"
+          role="tab"
+          aria-selected={initialLevel === "smp"}
+          aria-controls="panel-smp"
+          tabindex={initialLevel === "smp" ? 0 : -1}
+        >
+          SMP <span>Create</span>
+        </button>
+
+        <button
+          class:list={[
+            "jenjang-tab",
+            { active: initialLevel === "sma" }
+          ]}
+          type="button"
+          id="tab-sma"
+          data-target="sma"
+          role="tab"
+          aria-selected={initialLevel === "sma"}
+          aria-controls="panel-sma"
+          tabindex={initialLevel === "sma" ? 0 : -1}
+        >
+          SMA <span>Innovate</span>
+        </button>
+
+      </div>
+
+      <!-- =====================================
+           SD — EXPLORE
+      ===================================== -->
+
+      <div
+        class:list={[
+          "jenjang-panel",
+          { active: initialLevel === "sd" }
+        ]}
+        id="panel-sd"
+        data-panel="sd"
+        role="tabpanel"
+        aria-labelledby="tab-sd"
+        hidden={initialLevel !== "sd"}
+      >
+
+        <div class="jenjang-intro">
+
+          <p class="jenjang-level">
+            SD — Explore (Kelas 1–6)
+          </p>
+
+          <h2>
+            Masa paling ingin tahu dalam hidup anak.
+            Kami menjaganya tetap menyala.
+          </h2>
+
+          <p>
+            Di jenjang SD, anak tidak duduk menghafal istilah
+            teknologi. Ia bermain dengan logika, membongkar cara
+            kerja benda, membuat cerita interaktif, dan menemukan
+            bahwa komputer adalah alat untuk mewujudkan ide,
+            bukan sekadar layar hiburan. Pada saat yang sama,
+            hafalan Al-Qur'an, salat berjamaah, dan adab
+            dibiasakan setiap hari hingga menjadi bagian dari
+            diri anak.
+          </p>
+
+        </div>
+
+        <!-- AREA BELAJAR SD -->
+
+        <div class="jenjang-table-card">
+
+          <h3>Area belajar SD</h3>
+
+          <div class="jenjang-table-scroll">
+
+            <table class="jenjang-table">
+
+              <thead>
+                <tr>
+                  <th scope="col">Area belajar</th>
+                  <th scope="col">Kelas 1–3 (Fase A–B)</th>
+                  <th scope="col">Kelas 4–6 (Fase C)</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {sdCurriculum.map((item) => (
+                  <tr>
+                    <th scope="row">{item.area}</th>
+                    <td>{item.early}</td>
+                    <td>{item.late}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
+
+          </div>
+        </div>
+
+        <!-- ALUR HARI & PROFIL LULUSAN -->
+
+        <div class="jenjang-bottom-grid">
+
+          <div class="jenjang-info-card">
+
+            <h3>Contoh alur hari belajar</h3>
+
+            <ol class="jenjang-schedule">
+              {sdSchedule.map((activity) => (
+                <li>{activity}</li>
+              ))}
+            </ol>
+
+            <p class="jenjang-hours">
+              Jam operasional 07.45–14.00, Senin–Jumat.
+            </p>
+
+          </div>
+
+          <div class="jenjang-info-card">
+
+            <h3>Profil lulusan SD</h3>
+
+            <ul class="jenjang-check-list">
+              {sdGraduate.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================
+           SMP — CREATE
+      ===================================== -->
+
+      <div
+        class:list={[
+          "jenjang-panel",
+          { active: initialLevel === "smp" }
+        ]}
+        id="panel-smp"
+        data-panel="smp"
+        role="tabpanel"
+        aria-labelledby="tab-smp"
+        hidden={initialLevel !== "smp"}
+      >
+
+        <div class="jenjang-intro">
+
+          <p class="jenjang-level">
+            SMP — Create (Kelas 7–9)
+          </p>
+
+          <h2>
+            Dari pengguna menjadi pembuat.
+          </h2>
+
+          <p>
+            Remaja memiliki energi besar untuk membangun sesuatu,
+            dan kami memberinya alat serta arah. Di SMP, siswa
+            mulai menulis kode dengan bahasa pemrograman
+            sungguhan, merancang produk digital, dan mengerjakan
+            proyek yang menjawab masalah nyata. Pembinaan
+            karakter bergeser dari pembiasaan menjadi tanggung
+            jawab: siswa mulai memimpin, mengelola waktu,
+            dan menjaga amanah tim.
+          </p>
+
+        </div>
+
+        <!-- AREA BELAJAR SMP -->
+
+        <div class="jenjang-table-card">
+
+          <h3>Area belajar SMP</h3>
+
+          <div class="jenjang-table-scroll">
+
+            <table class="jenjang-table">
+
+              <thead>
+                <tr>
+                  <th scope="col">Area belajar</th>
+                  <th scope="col">Materi pembelajaran</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {smpCurriculum.map((item) => (
+                  <tr>
+                    <th scope="row">{item.area}</th>
+                    <td>{item.content}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+        <!-- PROFIL LULUSAN SMP -->
+
+        <div class="jenjang-bottom-grid jenjang-single-card">
+
+          <div class="jenjang-info-card">
+
+            <h3>Profil lulusan SMP</h3>
+
+            <ul class="jenjang-check-list">
+              {smpGraduate.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================
+           SMA — INNOVATE
+      ===================================== -->
+
+      <div
+        class:list={[
+          "jenjang-panel",
+          { active: initialLevel === "sma" }
+        ]}
+        id="panel-sma"
+        data-panel="sma"
+        role="tabpanel"
+        aria-labelledby="tab-sma"
+        hidden={initialLevel !== "sma"}
+      >
+
+        <div class="jenjang-intro">
+
+          <p class="jenjang-level">
+            SMA — Innovate (Kelas 10–12)
+          </p>
+
+          <h2>
+            Tiga tahun membangun portofolio,
+            bukan sekadar mengumpulkan nilai.
+          </h2>
+
+          <p>
+            Di SMA, siswa memilih jalur peminatan teknologi
+            yang sesuai bakatnya, mendalaminya bersama mentor
+            praktisi, dan menguji karyanya pada pengguna nyata.
+            Kelas 12 ditutup dengan portofolio, pengalaman
+            magang, dan rencana jelas: kuliah, bekerja,
+            atau merintis usaha. Kematangan iman menjadi
+            penyeimbang agar kecakapan tidak berubah
+            menjadi kesombongan.
+          </p>
+
+        </div>
+
+        <!-- KOMPONEN PEMBELAJARAN SMA -->
+
+        <div class="jenjang-table-card">
+
+          <h3>Komponen pembelajaran</h3>
+
+          <div class="jenjang-table-scroll">
+
+            <table class="jenjang-table">
+
+              <thead>
+                <tr>
+                  <th scope="col">Komponen</th>
+                  <th scope="col">Materi pembelajaran</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {smaCurriculum.map((item) => (
+                  <tr>
+                    <th scope="row">{item.area}</th>
+                    <td>{item.content}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+        <!-- JALUR PEMINATAN SMA -->
+
+        <div class="jenjang-table-card">
+
+          <h3>Jalur peminatan SMA</h3>
+
+          <div class="jenjang-table-scroll">
+
+            <table class="jenjang-table">
+
+              <thead>
+                <tr>
+                  <th scope="col">Jalur</th>
+                  <th scope="col">Yang dipelajari</th>
+                  <th scope="col">Contoh karya akhir</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {smaTracks.map((track) => (
+                  <tr>
+                    <th scope="row">{track.name}</th>
+                    <td>{track.study}</td>
+                    <td>{track.project}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <p>
+            <small>
+              Jalur peminatan yang dibuka pada angkatan pertama
+              ditetapkan pimpinan; tampilkan hanya jalur yang tersedia.
+            </small>
+          </p>
+
+        </div>
+
+        <!-- PROFIL LULUSAN SMA -->
+
+        <div class="jenjang-bottom-grid jenjang-single-card">
+
+          <div class="jenjang-info-card">
+
+            <h3>Profil lulusan SMA</h3>
+
+            <ul class="jenjang-check-list">
+              {smaGraduate.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- =====================================
+     SCRIPT TAB JENJANG
+===================================== -->
+
+<script>
+  import "../../scripts/jenjang";
+</script>
+
+<style>
+  .jenjang-panel[hidden] {
+    display: none !important;
+  }
+</style>

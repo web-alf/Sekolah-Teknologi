@@ -1,0 +1,62 @@
+
+---
+import "../../styles/components/hero.css";
+import heroImage from "../../assets/hero/siswa-teknologi.png";
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-container">
+
+    <!-- BAGIAN KIRI: TEKS HERO -->
+    <div class="hero-content">
+
+      <p class="hero-label">
+        SEKOLAH SD · SMP · SMA BERBASIS TEKNOLOGI
+      </p>
+
+      <h1 id="hero-title" class="hero-title">
+        Anak Anda Tidak Sekadar Memakai Teknologi.
+        <span>
+          Di Sini, Ia Belajar Menciptakannya.
+        </span>
+      </h1>
+
+      <p class="hero-description">
+        Sekolah Teknologi adalah sekolah formal jenjang SD,
+        SMP, dan SMA yang memadukan coding, sains, dan
+        keterampilan digital dengan pendidikan Al-Qur’an
+        dan karakter. Satu perjalanan belajar 12 tahun:
+        Explore di SD, Create di SMP, Innovate di SMA.
+      </p>
+
+      <!-- TOMBOL HERO -->
+      <div class="hero-buttons">
+
+        <a href="/jenjang/sd" class="hero-btn-primary">
+          Lihat Jenjang
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="/tentang-kami" class="hero-btn-secondary">
+          Tentang Kami
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BAGIAN KANAN: GAMBAR HERO -->
+    <div class="hero-visual">
+
+      <img
+        src={heroImage.src}
+        alt="Dua siswa belajar teknologi dengan nilai, adab, dan karakter"
+        class="hero-image"
+        width={heroImage.width}
+        height={heroImage.height}
+      />
+
+    </div>
+
+  </div>
+</section>
