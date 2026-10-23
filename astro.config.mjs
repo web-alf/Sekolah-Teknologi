@@ -1,5 +1,9 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+ // @ts-check
+import { defineConfig } from "astro/config";
+
+// Konfigurasi website Sekolah Teknologi
+export default defineConfig({
+  site: "https://sekolahteknologi.id",
+  output: "static",
+});
