@@ -532,3 +532,51 @@
     transform: none;
   }
 }
+
+/* =========================================
+   FINAL POLISH FOOTER MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .st-footer-grid {
+    column-gap: 18px;
+    row-gap: 20px;
+  }
+
+  .st-footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .st-footer-column ul {
+    gap: 10px;
+  }
+
+  .st-footer-column a {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .st-footer-contact a {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .st-footer-contact a span:last-child {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .st-footer-bottom p,
+  .st-footer-legal a {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .st-footer-bottom {
+    gap: 8px;
+    padding: 18px 0 22px;
+  }
+}
