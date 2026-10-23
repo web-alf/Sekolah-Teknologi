@@ -1,6 +1,7 @@
 
 /* =========================================
    HEADER SEKOLAH TEKNOLOGI
+   FULL RESPONSIVE
 ========================================= */
 
 .site-header {
@@ -14,6 +15,12 @@
   background: #ffffff;
   border-bottom: 1px solid #edf1f5;
   overflow: visible;
+}
+
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -35,7 +42,7 @@
 }
 
 /* =========================================
-   LOGO SEKOLAH
+   LOGO
 ========================================= */
 
 .brand {
@@ -82,7 +89,6 @@
 
   display: inline-flex;
   align-items: center;
-  gap: 7px;
 
   padding: 10px 0;
 
@@ -123,8 +129,45 @@
   position: relative;
 }
 
+.nav-dropdown-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* TOMBOL V */
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 28px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover,
+.nav-dropdown.active .dropdown-toggle {
+  color: #008dd2;
+}
+
+.dropdown-toggle:focus-visible {
+  outline: 2px solid #008dd2;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* IKON V KECIL */
+
 .dropdown-chevron {
-  display: inline-block;
+  display: block;
 
   width: 7px;
   height: 7px;
@@ -132,11 +175,11 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
 
-  margin-left: 2px;
-  flex-shrink: 0;
-
   transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s ease;
 }
+
+/* DROPDOWN DESKTOP */
 
 .dropdown-menu {
   display: none;
@@ -156,10 +199,17 @@
 }
 
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.is-open .dropdown-menu {
   display: flex;
   flex-direction: column;
 }
+
+.nav-dropdown.is-open .dropdown-chevron {
+  transform: translateY(2px) rotate(225deg);
+}
+
+/* LINK DROPDOWN */
 
 .dropdown-menu a {
   display: block;
@@ -179,7 +229,7 @@
 }
 
 /* =========================================
-   TOMBOL DAFTAR SEKARANG
+   TOMBOL DAFTAR
 ========================================= */
 
 .header-cta {
@@ -211,7 +261,7 @@
 }
 
 /* =========================================
-   HAMBURGER MENU
+   HAMBURGER
 ========================================= */
 
 .menu-toggle {
@@ -246,8 +296,6 @@
   background: #102b50;
   border-radius: 3px;
 
-  flex-shrink: 0;
-
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
@@ -263,8 +311,7 @@
 }
 
 /* =========================================
-   TABLET
-   MAX WIDTH 1000PX
+   TABLET & MOBILE
 ========================================= */
 
 @media (max-width: 1000px) {
@@ -276,9 +323,10 @@
   .header-inner {
     height: 60px;
     padding: 0 24px;
-    flex-wrap: wrap;
     gap: 0;
   }
+
+  /* LOGO */
 
   .brand {
     flex: 0 0 140px;
@@ -290,6 +338,8 @@
     transform: translateY(-50%);
   }
 
+  /* MENU MOBILE */
+
   .main-nav {
     display: none;
 
@@ -299,7 +349,10 @@
     right: 0;
 
     width: 100%;
-    padding: 12px 24px 20px;
+    max-height: calc(100dvh - 60px);
+    overflow-y: auto;
+
+    padding: 10px 24px 18px;
 
     flex-direction: column;
     align-items: stretch;
@@ -314,39 +367,98 @@
     display: flex;
   }
 
+  /* LINK MENU */
+
   .nav-item {
-    padding: 14px 0;
+    padding: 13px 0;
+    font-size: 13px;
+    line-height: 20px;
   }
 
   .nav-item.active::after {
     display: none;
   }
 
+  /* JENJANG */
+
   .nav-dropdown {
     width: 100%;
   }
 
-  .dropdown-menu {
+  .nav-dropdown-header {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+    width: fit-content;
+  }
+
+  .jenjang-nav-link {
+    flex: 0 0 auto;
+  }
+
+  /* IKON V DEKAT TULISAN */
+
+  .dropdown-toggle {
+    width: 22px;
+    height: 32px;
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  .dropdown-chevron {
+    width: 7px;
+    height: 7px;
+  }
+
+  /* DROPDOWN AWALNYA TERTUTUP */
+
+  .nav-dropdown .dropdown-menu {
+    display: none;
+
     position: static;
-
+    width: 100%;
     min-width: 0;
-    padding: 4px 8px;
 
-    background: #f5f7fa;
+    margin: 0 0 8px;
+    padding: 8px;
+
     border: none;
+    border-radius: 10px;
+
+    background: #f5f8fc;
     box-shadow: none;
   }
 
-  .dropdown-menu a {
-    padding: 10px 12px;
+  /* MUNCUL HANYA SETELAH KLIK */
+
+  .nav-dropdown.is-open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
   }
+
+  /* TIDAK MUNCUL SAAT HOVER MOBILE */
+
+  .nav-dropdown:hover:not(.is-open) .dropdown-menu,
+  .nav-dropdown:focus-within:not(.is-open) .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu a {
+    padding: 11px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* CTA */
 
   .header-cta {
     margin-left: auto;
     margin-right: 16px;
     padding: 10px 16px;
   }
+
+  /* HAMBURGER */
 
   .menu-toggle {
     display: flex;
@@ -355,7 +467,6 @@
 
 /* =========================================
    MOBILE
-   MAX WIDTH 480PX
 ========================================= */
 
 @media (max-width: 480px) {
@@ -364,8 +475,6 @@
     padding: 0 16px;
   }
 
-  /* LOGO MOBILE LEBIH KECIL */
-
   .brand {
     flex: 0 0 120px;
     height: 60px;
@@ -373,19 +482,12 @@
 
   .brand img {
     width: 110px;
-    height: auto;
-
-    transform: translateY(-50%) scale(1);
-    transform-origin: left center;
+    transform: translateY(-50%);
   }
-
-  /* TOMBOL DAFTAR DISEMBUNYIKAN */
 
   .header-cta {
     display: none;
   }
-
-  /* HAMBURGER LEBIH PROPORSIONAL */
 
   .menu-toggle {
     width: 36px;
@@ -393,7 +495,6 @@
 
     padding: 7px;
     margin-left: auto;
-
     gap: 4px;
   }
 
@@ -406,11 +507,18 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  .nav-item {
+    padding: 12px 0;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 12px;
+  }
 }
 
 /* =========================================
    MOBILE SANGAT KECIL
-   MAX WIDTH 360PX
 ========================================= */
 
 @media (max-width: 360px) {
@@ -434,5 +542,92 @@
 
   .menu-toggle span {
     width: 20px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span,
+  .dropdown-chevron,
+  .nav-item,
+  .header-cta {
+    transition: none;
+  }
+}
+
+/* =========================================
+   FIX DROPDOWN JENJANG MOBILE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  /* Jenjang dan ikon V berdampingan */
+  .nav-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  /* Tombol panah V */
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  /* Pilihan awalnya tersembunyi */
+  .nav-dropdown .dropdown-menu,
+  .nav-dropdown:hover:not(.is-open) .dropdown-menu,
+  .nav-dropdown:focus-within:not(.is-open) .dropdown-menu {
+    display: none;
+  }
+
+  /* Pilihan muncul saat ikon V diklik */
+  .main-nav .nav-dropdown.is-open .dropdown-menu,
+  .main-nav .nav-dropdown.is-open:hover .dropdown-menu,
+  .main-nav .nav-dropdown.is-open:focus-within .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+
+    position: static;
+    width: 100%;
+    min-width: 0;
+
+    margin: 4px 0 10px;
+    padding: 8px;
+
+    background: #f5f8fc;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  /* Pilihan SD SMP SMA */
+  .nav-dropdown .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 12px;
+
+    color: #102b50;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .nav-dropdown .dropdown-item:hover {
+    background: #eaf7fd;
+    color: #008dd2;
+  }
+
+  /* Panah berputar saat terbuka */
+  .nav-dropdown.is-open .dropdown-chevron {
+    transform: translateY(2px) rotate(225deg);
   }
 }

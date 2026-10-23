@@ -3,30 +3,18 @@
 import "../../styles/components/header.css";
 import logoSekolah from "../../assets/logo/logo-sekolah-teknologi.png";
 
-// URL halaman saat ini
 const pathname =
   Astro.url.pathname.replace(/\/+$/, "") || "/";
 
-// Mengecek menu aktif
 const isActive = (path: string) =>
   path === "/"
     ? pathname === "/"
     : pathname === path || pathname.startsWith(path + "/");
 
-// Menu dropdown jenjang
 const jenjangMenu = [
-  {
-    nama: "SD — Explore",
-    link: "/jenjang/sd",
-  },
-  {
-    nama: "SMP — Create",
-    link: "/jenjang/smp",
-  },
-  {
-    nama: "SMA — Innovate",
-    link: "/jenjang/sma",
-  },
+  { nama: "SD — Explore", link: "/jenjang/sd" },
+  { nama: "SMP — Create", link: "/jenjang/smp" },
+  { nama: "SMA — Innovate", link: "/jenjang/sma" },
 ];
 
 const isJenjangActive = isActive("/jenjang");
@@ -35,7 +23,7 @@ const isJenjangActive = isActive("/jenjang");
 <header class="site-header">
   <div class="header-inner">
 
-    <!-- LOGO SEKOLAH -->
+    <!-- LOGO -->
     <a
       href="/"
       class="brand"
@@ -48,7 +36,7 @@ const isJenjangActive = isActive("/jenjang");
       />
     </a>
 
-    <!-- NAVIGASI UTAMA -->
+    <!-- NAVIGASI -->
     <nav
       class="main-nav"
       id="main-nav"
@@ -91,32 +79,52 @@ const isJenjangActive = isActive("/jenjang");
         ]}
       >
 
-        <a
-          href="/jenjang"
-          class:list={[
-            "nav-item",
-            { active: isJenjangActive },
-          ]}
-          aria-haspopup="true"
+        <div class="nav-dropdown-header">
+
+          <!-- TULISAN JENJANG -->
+          <a
+            href="/jenjang"
+            class:list={[
+              "nav-item",
+              "jenjang-nav-link",
+              { active: isJenjangActive },
+            ]}
+            aria-current={
+              pathname === "/jenjang"
+                ? "page"
+                : undefined
+            }
+          >
+            Jenjang
+          </a>
+
+          <!-- TOMBOL PANAH V -->
+          <button
+            type="button"
+            class="dropdown-toggle"
+            aria-label="Tampilkan pilihan jenjang"
+            aria-expanded="false"
+            aria-controls="jenjang-dropdown-menu"
+          >
+            <span
+              class="dropdown-chevron"
+              aria-hidden="true"
+            ></span>
+          </button>
+
+        </div>
+
+        <!-- PILIHAN SD SMP SMA -->
+        <div
+          class="dropdown-menu"
+          id="jenjang-dropdown-menu"
         >
-          Jenjang
-
-          <span
-            class="dropdown-chevron"
-            aria-hidden="true"
-          ></span>
-        </a>
-
-        <!-- PILIH SD / SMP / SMA -->
-        <div class="dropdown-menu">
           {jenjangMenu.map((item) => (
             <a
               href={item.link}
               class:list={[
                 "dropdown-item",
-                {
-                  active: pathname === item.link,
-                },
+                { active: pathname === item.link },
               ]}
               aria-current={
                 pathname === item.link
@@ -128,6 +136,7 @@ const isJenjangActive = isActive("/jenjang");
             </a>
           ))}
         </div>
+
       </div>
 
       <!-- PROGRAM -->
@@ -165,7 +174,7 @@ const isJenjangActive = isActive("/jenjang");
       <span aria-hidden="true">→</span>
     </a>
 
-    <!-- HAMBURGER MOBILE: HANYA 3 GARIS -->
+    <!-- HAMBURGER MOBILE -->
     <button
       class="menu-toggle"
       type="button"
@@ -181,7 +190,7 @@ const isJenjangActive = isActive("/jenjang");
   </div>
 </header>
 
-<!-- SCRIPT HEADER -->
+<!-- SCRIPT -->
 <script>
   import "../../scripts/header";
 </script>
