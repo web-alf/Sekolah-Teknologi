@@ -1,12 +1,10 @@
 
 /* =========================================
    FOOTER SEKOLAH TEKNOLOGI
-   FULL REVISI - COMPACT & RESPONSIVE
+   RESPONSIVE - CLEAN & COMPACT
 ========================================= */
 
-/* =========================================
-   FOOTER UTAMA
-========================================= */
+/* FOOTER UTAMA */
 
 .st-footer {
   width: 100%;
@@ -30,7 +28,6 @@
 
 /* =========================================
    CONTAINER
-   SAMA DENGAN SECTION LAIN
 ========================================= */
 
 .st-footer-container {
@@ -38,11 +35,11 @@
   max-width: 1280px;
 
   margin: 0 auto;
-  padding: 28px 40px 0;
+  padding: 32px 40px 0;
 }
 
 /* =========================================
-   GRID UTAMA FOOTER
+   GRID DESKTOP
 ========================================= */
 
 .st-footer-grid {
@@ -57,12 +54,14 @@
 
   align-items: start;
 
-  gap: 24px;
-  padding-bottom: 24px;
+  column-gap: 24px;
+  row-gap: 24px;
+
+  padding-bottom: 28px;
 }
 
 /* =========================================
-   BRAND & LOGO
+   BRAND
 ========================================= */
 
 .st-footer-brand {
@@ -73,59 +72,30 @@
   display: inline-flex;
   align-items: center;
 
-  gap: 10px;
   width: fit-content;
   max-width: 100%;
 
-  color: #164b86;
   text-decoration: none;
 }
-
-.st-footer-logo-mark {
-  display: flex;
-  flex-shrink: 0;
-
-  width: 44px;
-  height: 44px;
-}
-
-.st-footer-logo-mark svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.st-footer-logo-text {
-  display: flex;
-  flex-direction: column;
-
-  gap: 2px;
-
-  font-size: 17px;
-  line-height: 1.1;
-  letter-spacing: 0.5px;
-}
-
-/* LOGO BERUPA GAMBAR */
 
 .st-footer .st-footer-logo-image {
   display: block;
 
   width: 140px;
-  max-width: 140px;
+  max-width: 100%;
   height: auto;
 
   object-fit: contain;
 }
 
 /* =========================================
-   DESKRIPSI SEKOLAH
+   DESKRIPSI
 ========================================= */
 
 .st-footer-description {
   max-width: 310px;
 
-  margin: 14px 0 14px;
+  margin: 14px 0;
   padding: 0;
 
   color: #64748b;
@@ -180,12 +150,13 @@
 }
 
 .st-footer-social svg {
+  display: block;
   width: 16px;
   height: 16px;
 }
 
 /* =========================================
-   KOLOM LINK
+   KOLOM FOOTER
 ========================================= */
 
 .st-footer-column {
@@ -243,7 +214,7 @@
 }
 
 /* =========================================
-   KOLOM KONTAK
+   KONTAK
 ========================================= */
 
 .st-footer-contact ul {
@@ -251,7 +222,7 @@
 }
 
 .st-footer-contact a {
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
 
   gap: 8px;
@@ -266,16 +237,20 @@
 
   flex-shrink: 0;
 
-  min-width: 16px;
+  width: 18px;
+  height: 18px;
 
   color: #e536a3;
+}
 
-  font-size: 15px;
-  line-height: 1.4;
+.st-footer-contact-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 /* =========================================
-   BAGIAN BAWAH FOOTER
+   FOOTER BOTTOM
 ========================================= */
 
 .st-footer-bottom {
@@ -302,7 +277,7 @@
 }
 
 /* =========================================
-   LINK LEGAL
+   LEGAL
 ========================================= */
 
 .st-footer-legal {
@@ -327,19 +302,23 @@
 }
 
 /* =========================================
-   RESPONSIVE TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 1050px) {
+
   .st-footer-container {
     padding: 28px 24px 0;
   }
 
   .st-footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
 
-    gap: 24px;
-    padding-bottom: 22px;
+    column-gap: 24px;
+    row-gap: 26px;
+
+    padding-bottom: 24px;
   }
 
   .st-footer-brand {
@@ -356,80 +335,150 @@
 }
 
 /* =========================================
-   RESPONSIVE MOBILE
+   MOBILE
 ========================================= */
 
 @media (max-width: 650px) {
+
   .st-footer-container {
-    padding: 26px 20px 0;
+    padding: 28px 20px 0;
   }
 
   .st-footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
 
-    column-gap: 20px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    column-gap: 22px;
     row-gap: 24px;
 
-    padding-bottom: 22px;
+    align-items: start;
+
+    padding-bottom: 24px;
   }
 
-  /* BRAND LEBAR PENUH */
+  /* BRAND FULL WIDTH */
 
   .st-footer-brand {
     grid-column: 1 / -1;
+    grid-row: 1;
   }
 
   .st-footer .st-footer-logo-image {
-    width: 135px;
-    max-width: 135px;
+    width: 125px;
   }
 
   .st-footer-description {
     max-width: 100%;
 
-    margin: 12px 0;
-    font-size: 13px;
-    line-height: 1.65;
+    margin: 12px 0 14px;
+
+    font-size: 12px;
+    line-height: 1.7;
   }
 
-  /* MENU */
+  .st-footer-social {
+    gap: 9px;
+  }
+
+  .st-footer-social a {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* NAVIGASI KIRI */
+
+  .st-footer-navigation {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* JENJANG KANAN */
+
+  .st-footer-levels {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* PROGRAM KIRI */
+
+  .st-footer-programs {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  /* KONTAK KANAN */
+
+  .st-footer-contact {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  /* JUDUL KOLOM */
 
   .st-footer-column h3 {
     margin: 0 0 12px;
-    font-size: 14px;
+
+    font-size: 13px;
+    font-weight: 800;
   }
+
+  /* LINK */
 
   .st-footer-column ul {
     gap: 9px;
   }
 
   .st-footer-column a {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   /* KONTAK */
 
-  .st-footer-contact {
-    grid-column: 1 / -1;
+  .st-footer-contact a {
+    gap: 6px;
+    align-items: flex-start;
   }
 
-  .st-footer-contact ul {
-    gap: 10px;
+  .st-footer-contact-icon {
+    width: 16px;
+    height: 16px;
   }
 
-  /* FOOTER BAWAH */
+  .st-footer-contact-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* COPYRIGHT */
 
   .st-footer-bottom {
     flex-direction: column;
     align-items: flex-start;
 
     gap: 10px;
-    padding: 16px 0;
+
+    padding: 16px 0 20px;
+  }
+
+  .st-footer-bottom p {
+    font-size: 11px;
+    line-height: 1.6;
   }
 
   .st-footer-legal {
-    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 16px;
+  }
+
+  .st-footer-legal a {
+    font-size: 11px;
+    line-height: 1.6;
   }
 }
 
@@ -438,13 +487,18 @@
 ========================================= */
 
 @media (max-width: 400px) {
+
   .st-footer-container {
     padding: 24px 16px 0;
   }
 
   .st-footer-grid {
     column-gap: 14px;
-    row-gap: 20px;
+    row-gap: 22px;
+  }
+
+  .st-footer .st-footer-logo-image {
+    width: 115px;
   }
 
   .st-footer-column h3 {
@@ -455,8 +509,12 @@
     font-size: 12px;
   }
 
-  .st-footer-legal {
-    gap: 12px;
+  .st-footer-contact a {
+    gap: 5px;
+  }
+
+  .st-footer-bottom {
+    padding-bottom: 24px;
   }
 }
 
@@ -465,6 +523,7 @@
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .st-footer-social a {
     transition: none;
   }

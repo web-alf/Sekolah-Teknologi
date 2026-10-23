@@ -3,20 +3,23 @@
 import "../../styles/layout/footer.css";
 import logoSekolah from "../../assets/logo/logo-sekolah-teknologi.png";
 
+// NAVIGASI
 const navigation = [
   { label: "Beranda", href: "/" },
-  { label: "Tentang Kami", href: "/#tentang-kami" },
-  { label: "Jenjang", href: "/#jenjang" },
+  { label: "Tentang Kami", href: "/tentang-kami" },
+  { label: "Jenjang", href: "/jenjang" },
   { label: "Program", href: "/#program-unggulan" },
-  { label: "Fasilitas", href: "/#lingkungan-belajar" },
+  { label: "Fasilitas", href: "/fasilitas" },
 ];
 
+// JENJANG PENDIDIKAN
 const levels = [
-  { label: "SD", href: "/#jenjang" },
-  { label: "SMP", href: "/#jenjang" },
-  { label: "SMA", href: "/#jenjang" },
+  { label: "SD", href: "/jenjang/sd" },
+  { label: "SMP", href: "/jenjang/smp" },
+  { label: "SMA", href: "/jenjang/sma" },
 ];
 
+// PROGRAM
 const programs = [
   { label: "Program Unggulan", href: "/#program-unggulan" },
   { label: "Ekstrakurikuler", href: "/#ekstrakurikuler" },
@@ -26,9 +29,10 @@ const programs = [
 <footer class="st-footer">
   <div class="st-footer-container">
 
+    <!-- GRID FOOTER -->
     <div class="st-footer-grid">
 
-      <!-- LOGO DAN DESKRIPSI -->
+      <!-- BRAND -->
       <div class="st-footer-brand">
 
         <a
@@ -131,7 +135,7 @@ const programs = [
 
       <!-- NAVIGASI -->
       <nav
-        class="st-footer-column"
+        class="st-footer-column st-footer-navigation"
         aria-label="Navigasi footer"
       >
         <h3>Navigasi</h3>
@@ -149,7 +153,7 @@ const programs = [
 
       <!-- JENJANG -->
       <nav
-        class="st-footer-column"
+        class="st-footer-column st-footer-levels"
         aria-label="Jenjang pendidikan"
       >
         <h3>Jenjang</h3>
@@ -167,7 +171,7 @@ const programs = [
 
       <!-- PROGRAM -->
       <nav
-        class="st-footer-column"
+        class="st-footer-column st-footer-programs"
         aria-label="Program sekolah"
       >
         <h3>Program</h3>
@@ -185,6 +189,7 @@ const programs = [
 
       <!-- KONTAK -->
       <div class="st-footer-column st-footer-contact">
+
         <h3>Kontak</h3>
 
         <ul>
@@ -198,31 +203,33 @@ const programs = [
                 class="st-footer-contact-icon"
                 aria-hidden="true"
               >
-                ◉
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M20.5 11.7a8.5 8.5 0 0 1-12.3 7.6L4 20l.8-4.1a8.5 8.5 0 1 1 15.7-4.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 8.5c.2-.4.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .5-.2.7l-.6.7c.7 1.3 1.8 2.3 3.1 3l.7-.7c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.5v.5c0 .4-.2.7-.5.9-.5.3-1.1.4-1.7.3-3.3-.7-5.8-3.2-6.5-6.5-.1-.6 0-1.2.2-1.7Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </span>
-              Hubungi kami via WhatsApp
+
+              <span>Hubungi kami via WhatsApp</span>
             </a>
           </li>
-
-          <li>
-            <a href="#lokasi-sekolah">
-              <span
-                class="st-footer-contact-icon"
-                aria-hidden="true"
-              >
-                
-              </span>
-             
-            </a>
-          </li>
-
- 
         </ul>
+
       </div>
 
     </div>
 
-    <!-- COPYRIGHT -->
+    <!-- FOOTER BOTTOM -->
     <div class="st-footer-bottom">
 
       <p>
@@ -241,5 +248,6 @@ const programs = [
       </div>
 
     </div>
+
   </div>
 </footer>
