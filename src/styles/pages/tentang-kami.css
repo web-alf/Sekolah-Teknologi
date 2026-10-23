@@ -1,11 +1,20 @@
 
 /* =========================================
-   TENTANG KAMI - SEKOLAH TEKNOLOGI
-   FULL REVISI
+   HALAMAN TENTANG KAMI
+   SEKOLAH TEKNOLOGI
+   FULL REVISI RESPONSIVE
 ========================================= */
 
-* {
+/* RESET */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +23,10 @@ body {
   color: #102b50;
   background: #ffffff;
 }
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .about-container {
   width: 100%;
@@ -28,10 +41,9 @@ body {
 
 .about-hero {
   position: relative;
+  width: 100%;
   overflow: hidden;
-
-  /* DIPENDEKKAN AGAR VISI LEBIH NAIK */
-  padding: 45px 0 30px;
+  padding: 50px 0 45px;
 
   background: linear-gradient(
     120deg,
@@ -42,7 +54,9 @@ body {
 
 .about-hero .about-container {
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.5fr);
   align-items: center;
   gap: 45px;
 }
@@ -50,26 +64,35 @@ body {
 .about-hero-content {
   position: relative;
   z-index: 2;
+  min-width: 0;
 }
 
+/* LABEL */
+
 .about-eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: #d41491;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 800;
+  line-height: 1.4;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
+/* JUDUL UTAMA */
+
 .about-hero h1 {
   max-width: 850px;
-  margin: 0 0 25px;
+  margin: 0 0 22px;
+
   color: #102b50;
-  font-size: clamp(34px, 4vw, 54px);
+  font-size: clamp(30px, 3vw, 38px);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
 }
+
+/* PARAGRAF */
 
 .about-introduction {
   max-width: 850px;
@@ -78,7 +101,8 @@ body {
 .about-introduction p {
   margin: 0 0 16px;
   color: #52667b;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1.85;
 }
 
@@ -86,110 +110,130 @@ body {
   margin-bottom: 0;
 }
 
-/* DEKORASI */
+/* =========================================
+   DEKORASI HERO
+========================================= */
 
 .about-hero-art {
   position: relative;
-  min-height: 320px;
+  width: 100%;
+  min-height: 300px;
 }
+
+/* LINGKARAN BIRU */
 
 .about-art-circle {
   position: absolute;
   top: 15px;
   left: 0;
-  width: 220px;
-  height: 220px;
-  border: 26px solid #008dd2;
+
+  width: 200px;
+  height: 200px;
+
+  border: 24px solid #008dd2;
   border-radius: 50%;
 }
 
+/* KOTAK PINK */
+
 .about-art-square {
   position: absolute;
-  top: 95px;
+  top: 90px;
   right: 0;
-  width: 180px;
-  height: 180px;
-  border: 24px solid #d41491;
-  border-radius: 32px;
+
+  width: 165px;
+  height: 165px;
+
+  border: 22px solid #d41491;
+  border-radius: 30px;
+
   transform: rotate(35deg);
 }
+
+/* KOTAK ORANYE */
 
 .about-art-line {
   position: absolute;
   bottom: 0;
   left: 30px;
-  width: 130px;
-  height: 130px;
-  border: 20px solid #ff8a1e;
+
+  width: 115px;
+  height: 115px;
+
+  border: 18px solid #ff8a1e;
   border-radius: 25px;
+
   transform: rotate(20deg);
 }
 
 /* =========================================
    2. VISI
-   NAIK POLL + TEKS KE KANAN + LEBAR
 ========================================= */
 
 .about-vision {
-  /* SEBELUMNYA 75px ATAS BAWAH */
-  padding: 12px 0 18px;
+  width: 100%;
+  padding: 20px 0 24px;
   background: #ffffff;
 }
 
 .about-vision-card {
-  padding: 35px 45px;
-  border-radius: 24px;
+  padding: 28px 34px;
+
+  border-radius: 22px;
   background: #102b50;
   color: #ffffff;
 }
 
+/* JUDUL VISI */
+
 .about-vision-card h2 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
+
   color: #ff85cf;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
+  line-height: 1.25;
 }
 
-/* TEKS MENJADI SEKOLAH RUJUKAN */
+/* ISI VISI */
 
 .about-vision-card p {
-  width: calc(100% - 65px);
-  max-width: none;
-  margin: 0 0 0 65px;
-  padding: 0;
+  max-width: 1050px;
+  margin: 0;
 
   color: #ffffff;
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(16px, 1.5vw, 19px);
   font-weight: 700;
-  line-height: 1.55;
-
-  /* HURUF NORMAL, BUKAN CAPSLOCK */
-  text-transform: none;
-
-  overflow-wrap: break-word;
+  line-height: 1.65;
 }
 
 /* =========================================
    3. MISI
-   NAIK POLL
 ========================================= */
 
 .about-mission {
-  /* SEBELUMNYA 80px ATAS BAWAH */
-  padding: 12px 0 22px;
+  width: 100%;
+  padding: 35px 0 40px;
   background: #f2faff;
 }
 
+/* JUDUL SECTION */
+
 .about-section-heading {
-  margin-bottom: 20px;
+  margin: 0 0 22px;
 }
 
 .about-section-heading h2 {
   margin: 0;
+
   color: #102b50;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
 }
+
+/* GRID MISI */
 
 .about-mission-list {
   display: grid;
@@ -198,67 +242,76 @@ body {
 
   margin: 0;
   padding: 0;
+
   list-style: none;
   counter-reset: mission;
 }
 
+/* KARTU MISI */
+
 .about-mission-list li {
   position: relative;
-  min-height: 125px;
-  padding: 24px 25px 24px 75px;
+  min-width: 0;
+
+  padding: 20px 22px 20px 68px;
 
   border: 1px solid #e3edf5;
-  border-radius: 18px;
+  border-radius: 16px;
   background: #ffffff;
 
   color: #42566e;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.75;
 
   counter-increment: mission;
 }
 
+/* NOMOR MISI */
+
 .about-mission-list li::before {
   content: counter(mission, decimal-leading-zero);
+
   position: absolute;
-  top: 22px;
-  left: 24px;
+  top: 19px;
+  left: 22px;
 
   color: #008dd2;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 800;
+  line-height: 1.4;
 }
 
 /* =========================================
    4. NILAI INTI
-   NAIK POLL + KARTU LEBIH RAPAT
 ========================================= */
 
 .about-values {
-  /* SEBELUMNYA 85px ATAS 100px BAWAH */
-  padding: 12px 0 20px;
+  width: 100%;
+  padding: 35px 0 42px;
   background: #ffffff;
 }
 
-.about-values .about-section-heading {
-  margin-bottom: 20px;
-}
+/* GRID NILAI */
 
 .about-values-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
   gap: 14px;
 }
 
+/* KARTU NILAI */
+
 .about-value-card {
   min-width: 0;
-  padding: 23px;
+  padding: 20px;
 
   border: 1px solid #e7eef5;
-  border-radius: 18px;
+  border-radius: 16px;
   background: #ffffff;
 
-  box-shadow: 0 8px 24px rgba(16, 43, 80, 0.05);
+  box-shadow: 0 6px 20px rgba(16, 43, 80, 0.045);
 
   transition:
     transform 0.25s ease,
@@ -266,16 +319,18 @@ body {
 }
 
 .about-value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(16, 43, 80, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(16, 43, 80, 0.08);
 }
+
+/* NOMOR NILAI */
 
 .about-value-number {
   display: inline-flex;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   color: #008dd2;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -288,53 +343,71 @@ body {
   color: #ff8a1e;
 }
 
+/* JUDUL NILAI */
+
 .about-value-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
+
   color: #102b50;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 800;
+  line-height: 1.4;
 }
+
+/* DESKRIPSI NILAI */
 
 .about-value-card p {
   margin: 0;
+
   color: #64748b;
   font-size: 13px;
   line-height: 1.75;
 }
 
 /* =========================================
-   5. FILOSOFI EXPLORE-CREATE-INNOVATE
-   NAIK POLL + DEKAT NILAI INTI
+   5. FILOSOFI
+   EXPLORE - CREATE - INNOVATE
 ========================================= */
 
 .about-philosophy {
-  /* SEBELUMNYA 100px ATAS BAWAH */
-  padding: 12px 0 30px;
+  width: 100%;
+  padding: 38px 0 48px;
   background: #f2faff;
 }
 
+/* HEADER FILOSOFI */
+
 .about-philosophy-heading {
-  max-width: 800px;
-  margin: 0 auto 24px;
+  max-width: 850px;
+  margin: 0 auto 26px;
   text-align: center;
 }
 
+/* JUDUL FILOSOFI */
+
 .about-philosophy-heading h2 {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
+
   color: #102b50;
-  font-size: clamp(30px, 3.5vw, 42px);
+  font-size: clamp(26px, 2.5vw, 30px);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
 }
+
+/* DESKRIPSI FILOSOFI */
 
 .about-philosophy-heading > p {
   margin: 0;
+
   color: #64748b;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
-/* GRID 3 KARTU */
+/* =========================================
+   GRID FILOSOFI
+========================================= */
 
 .about-philosophy-grid {
   display: grid;
@@ -343,20 +416,23 @@ body {
   gap: 18px;
 }
 
-/* KARTU */
+/* =========================================
+   KARTU FILOSOFI
+========================================= */
 
 .about-philosophy-card {
   display: flex;
   flex-direction: column;
+
   min-width: 0;
-  padding: 28px;
+  padding: 22px;
 
   border: 1px solid #e4edf5;
-  border-top: 5px solid #008dd2;
-  border-radius: 22px;
+  border-top: 4px solid #008dd2;
+  border-radius: 20px;
 
   background: #ffffff;
-  box-shadow: 0 10px 30px rgba(16, 43, 80, 0.05);
+  box-shadow: 0 8px 24px rgba(16, 43, 80, 0.045);
 
   transition:
     transform 0.25s ease,
@@ -364,11 +440,11 @@ body {
 }
 
 .about-philosophy-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(16, 43, 80, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(16, 43, 80, 0.09);
 }
 
-/* WARNA TIAP FASE */
+/* WARNA BORDER */
 
 .about-philosophy-card.create {
   border-top-color: #d41491;
@@ -378,120 +454,129 @@ body {
   border-top-color: #ff8a1e;
 }
 
-/* BAGIAN ATAS KARTU */
+/* =========================================
+   BAGIAN ATAS KARTU
+========================================= */
 
 .about-philosophy-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 12px;
+
+  margin-bottom: 16px;
 }
+
+/* NOMOR */
 
 .about-philosophy-number {
   color: #b6c5d4;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
 }
+
+/* BADGE SD SMP SMA */
 
 .about-philosophy-level {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding: 8px 16px;
-  border-radius: 50px;
+  min-width: 48px;
+  padding: 7px 14px;
 
+  border-radius: 50px;
   background: #eaf7fd;
+
   color: #008dd2;
   font-size: 12px;
   font-weight: 800;
 }
+
+/* BADGE SMP */
 
 .about-philosophy-card.create .about-philosophy-level {
   background: #fce7f5;
   color: #d41491;
 }
 
+/* BADGE SMA */
+
 .about-philosophy-card.innovate .about-philosophy-level {
   background: #fff0de;
   color: #e97700;
 }
 
-/* JUDUL EXPLORE, CREATE, INNOVATE */
+/* =========================================
+   JUDUL FASE
+========================================= */
 
 .about-philosophy-card h3 {
-  margin: 0 0 18px;
-  color: #102b50;
-  font-size: 32px;
+  margin: 0 0 16px;
+
+  color: #008dd2;
+  font-size: 25px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
-.about-philosophy-card.explore h3 {
-  color: #008dd2;
-}
+/* CREATE */
 
 .about-philosophy-card.create h3 {
   color: #d41491;
 }
+
+/* INNOVATE */
 
 .about-philosophy-card.innovate h3 {
   color: #e97700;
 }
 
 /* =========================================
-   BAGIAN BAWAH KARTU FILOSOFI
-   LANGSUNG PERTANYAAN DAN JAWABAN
+   DETAIL FILOSOFI
 ========================================= */
 
 .about-philosophy-detail {
-  margin-top: 0;
-  padding-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid #edf1f5;
 }
 
-/* HILANGKAN:
-   PERTANYAAN PEMANDU SISWA
-   HASIL YANG TERLIHAT
-*/
+.about-philosophy-detail + .about-philosophy-detail {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+/* LABEL DETAIL
+   TETAP ADA UNTUK AKSESIBILITAS */
 
 .about-philosophy-detail h4 {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* PARAGRAF */
+
+.about-philosophy-detail p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* PERTANYAAN */
 
 .about-philosophy-detail .about-philosophy-question {
-  margin: 0 0 10px;
-  color: #334b65;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.7;
-}
-
-/* JAWABAN */
-
-.about-philosophy-detail p {
-  margin: 0;
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-/* PASTIKAN PERTANYAAN TETAP TEBAL */
-
-.about-philosophy-detail p.about-philosophy-question {
-  margin-bottom: 10px;
   color: #334b65;
   font-weight: 700;
-}
-
-/* JIKA ADA DUA BLOK DETAIL */
-
-.about-philosophy-detail + .about-philosophy-detail {
-  margin-top: 12px;
-  padding-top: 12px;
+  line-height: 1.65;
 }
 
 /* =========================================
@@ -504,56 +589,51 @@ body {
     padding: 0 24px;
   }
 
+  /* HERO */
+
   .about-hero {
-    padding: 40px 0 25px;
+    padding: 45px 0 38px;
   }
 
   .about-hero .about-container {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 0;
   }
 
   .about-hero-art {
     display: none;
   }
 
-  .about-vision {
-    padding: 12px 0 18px;
+  .about-hero h1 {
+    font-size: 34px;
   }
+
+  /* VISI */
 
   .about-vision-card {
-    padding: 32px;
+    padding: 28px;
   }
 
-  .about-vision-card p {
-    width: calc(100% - 35px);
-    margin-left: 35px;
-  }
-
-  .about-mission {
-    padding: 12px 0 20px;
-  }
+  /* MISI */
 
   .about-mission-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .about-values {
-    padding: 12px 0 20px;
-  }
+  /* NILAI INTI */
 
   .about-values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .about-philosophy {
-    padding: 12px 0 28px;
-  }
+  /* FILOSOFI */
 
   .about-philosophy-grid {
-    grid-template-columns: 1fr;
-    max-width: 650px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-philosophy-heading h2 {
+    font-size: 28px;
   }
 }
 
@@ -563,114 +643,230 @@ body {
 
 @media (max-width: 700px) {
 
+  /* CONTAINER */
+
   .about-container {
     padding: 0 20px;
   }
 
+  /* =====================================
+     HERO MOBILE
+  ===================================== */
+
   .about-hero {
-    padding: 30px 0 22px;
+    padding: 35px 0 30px;
   }
 
   .about-eyebrow {
-    font-size: 13px;
+    margin-bottom: 12px;
+    font-size: 11px;
     letter-spacing: 1.2px;
   }
 
   .about-hero h1 {
-    font-size: 34px;
-    letter-spacing: -1px;
+    margin-bottom: 18px;
+    font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
   }
 
   .about-introduction p {
+    margin-bottom: 14px;
     font-size: 14px;
     line-height: 1.8;
   }
 
-  /* VISI MOBILE */
+  /* =====================================
+     VISI MOBILE
+  ===================================== */
 
   .about-vision {
-    padding: 10px 0 16px;
+    padding: 18px 0 22px;
   }
 
   .about-vision-card {
-    padding: 25px 22px;
+    padding: 24px 20px;
     border-radius: 18px;
   }
 
   .about-vision-card h2 {
-    font-size: 27px;
+    margin-bottom: 12px;
+    font-size: 24px;
   }
 
   .about-vision-card p {
-    width: 100%;
-    margin-left: 0;
     font-size: 16px;
     line-height: 1.65;
   }
 
-  /* MISI MOBILE */
+  /* =====================================
+     MISI MOBILE
+  ===================================== */
 
   .about-mission {
-    padding: 12px 0 18px;
+    padding: 28px 0 34px;
+  }
+
+  .about-section-heading {
+    margin-bottom: 18px;
   }
 
   .about-section-heading h2 {
-    font-size: 30px;
+    font-size: 24px;
+  }
+
+  .about-mission-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .about-mission-list li {
-    min-height: auto;
-    padding: 22px 20px 22px 65px;
-    font-size: 13px;
+    padding: 18px 16px 18px 58px;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
   .about-mission-list li::before {
-    top: 20px;
-    left: 20px;
-    font-size: 20px;
+    top: 17px;
+    left: 16px;
+    font-size: 19px;
   }
 
-  /* NILAI INTI MOBILE */
+  /* =====================================
+     NILAI INTI MOBILE
+  ===================================== */
 
   .about-values {
-    padding: 12px 0 18px;
+    padding: 28px 0 34px;
   }
 
   .about-values-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .about-value-card {
-    padding: 22px;
+    padding: 18px;
   }
 
-  /* FILOSOFI MOBILE */
+  .about-value-number {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .about-value-card h3 {
+    margin-bottom: 9px;
+    font-size: 17px;
+  }
+
+  .about-value-card p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* =====================================
+     FILOSOFI MOBILE
+  ===================================== */
 
   .about-philosophy {
-    padding: 12px 0 25px;
+    padding: 32px 0 40px;
   }
 
   .about-philosophy-heading {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .about-philosophy-heading h2 {
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 1.3;
   }
 
   .about-philosophy-heading > p {
     font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .about-philosophy-card {
-    padding: 24px;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .about-philosophy-card-top {
+    margin-bottom: 14px;
   }
 
   .about-philosophy-card h3 {
-    font-size: 28px;
+    margin-bottom: 14px;
+    font-size: 24px;
+  }
+
+  .about-philosophy-detail {
+    padding-top: 12px;
   }
 
   .about-philosophy-detail p {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   MOBILE KECIL
+========================================= */
+
+@media (max-width: 400px) {
+
+  .about-container {
+    padding: 0 16px;
+  }
+
+  .about-hero h1 {
+    font-size: 25px;
+  }
+
+  .about-vision-card {
+    padding: 22px 18px;
+  }
+
+  .about-mission-list li {
+    padding-left: 56px;
+  }
+
+  .about-mission-list li::before {
+    left: 15px;
+  }
+
+  .about-philosophy-heading h2 {
+    font-size: 23px;
+  }
+
+  .about-philosophy-card h3 {
+    font-size: 23px;
+  }
+}
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .about-value-card,
+  .about-philosophy-card {
+    transition: none;
+  }
+
+  .about-value-card:hover,
+  .about-philosophy-card:hover {
+    transform: none;
   }
 }
