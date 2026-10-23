@@ -35,7 +35,7 @@
 }
 
 /* =========================================
-   LOGO
+   LOGO SEKOLAH
 ========================================= */
 
 .brand {
@@ -51,7 +51,6 @@
 
 .brand img {
   position: absolute;
-
   left: 0;
   top: 50%;
 
@@ -69,7 +68,7 @@
 }
 
 /* =========================================
-   NAVIGASI
+   NAVIGASI DESKTOP
 ========================================= */
 
 .main-nav {
@@ -212,7 +211,7 @@
 }
 
 /* =========================================
-   HAMBURGER MOBILE
+   HAMBURGER MENU
 ========================================= */
 
 .menu-toggle {
@@ -264,7 +263,8 @@
 }
 
 /* =========================================
-   TABLET & MOBILE
+   TABLET
+   MAX WIDTH 1000PX
 ========================================= */
 
 @media (max-width: 1000px) {
@@ -281,13 +281,13 @@
   }
 
   .brand {
-    flex: 0 0 180px;
+    flex: 0 0 140px;
     height: 60px;
   }
 
   .brand img {
-    width: 180px;
-    transform: translateY(-50%) scale(1.15);
+    width: 125px;
+    transform: translateY(-50%);
   }
 
   .main-nav {
@@ -354,7 +354,8 @@
 }
 
 /* =========================================
-   HP KECIL
+   MOBILE
+   MAX WIDTH 480PX
 ========================================= */
 
 @media (max-width: 480px) {
@@ -363,25 +364,75 @@
     padding: 0 16px;
   }
 
+  /* LOGO MOBILE LEBIH KECIL */
+
   .brand {
-    flex: 0 0 160px;
+    flex: 0 0 120px;
+    height: 60px;
   }
 
   .brand img {
-    width: 160px;
-    transform: translateY(-50%) scale(1.15);
+    width: 110px;
+    height: auto;
+
+    transform: translateY(-50%) scale(1);
+    transform-origin: left center;
   }
+
+  /* TOMBOL DAFTAR DISEMBUNYIKAN */
 
   .header-cta {
     display: none;
   }
 
+  /* HAMBURGER LEBIH PROPORSIONAL */
+
   .menu-toggle {
+    width: 36px;
+    height: 36px;
+
+    padding: 7px;
     margin-left: auto;
+
+    gap: 4px;
+  }
+
+  .menu-toggle span {
+    width: 21px;
+    height: 2px;
   }
 
   .main-nav {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+/* =========================================
+   MOBILE SANGAT KECIL
+   MAX WIDTH 360PX
+========================================= */
+
+@media (max-width: 360px) {
+
+  .header-inner {
+    padding: 0 14px;
+  }
+
+  .brand {
+    flex: 0 0 110px;
+  }
+
+  .brand img {
+    width: 100px;
+  }
+
+  .menu-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
   }
 }
