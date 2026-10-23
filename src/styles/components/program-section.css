@@ -61,6 +61,7 @@
   max-width: 850px;
   margin: 0 0 12px;
   padding: 0;
+
   color: #102b50;
   font-size: clamp(22px, 2.1vw, 28px);
   font-weight: 800;
@@ -74,12 +75,13 @@
   color: #008dd2;
 }
 
-/* DESKRIPSI */
+/* DESKRIPSI PENGANTAR */
 
 .program-intro {
   max-width: 800px;
   margin: 0;
   padding: 0;
+
   color: #52667b;
   font-size: 14px;
   font-weight: 400;
@@ -94,6 +96,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
+
   gap: 14px;
   width: 100%;
   margin: 0;
@@ -107,17 +110,23 @@
 .program-card {
   display: flex;
   flex-direction: column;
+
   min-width: 0;
   padding: 18px;
+
   background: #ffffff;
   border: 1px solid #e3edf5;
   border-radius: 16px;
+
   box-shadow: 0 5px 18px rgba(16, 43, 80, 0.045);
+
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
+
+/* HOVER KARTU */
 
 .program-card:hover {
   transform: translateY(-3px);
@@ -132,19 +141,25 @@
 .program-card-heading {
   display: flex;
   align-items: center;
+
   gap: 11px;
   margin: 0 0 11px;
 }
 
-/* IKON */
+/* =========================================
+   IKON PROGRAM
+========================================= */
 
 .program-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-shrink: 0;
+
   width: 40px;
   height: 40px;
+
   border-radius: 12px;
   background: #eaf7ff;
   color: #008dd2;
@@ -156,30 +171,36 @@
   height: 22px;
 }
 
-/* JUDUL KARTU */
+/* =========================================
+   JUDUL KARTU
+========================================= */
 
 .program-card h3 {
   margin: 0;
   padding: 0;
+
   color: #102b50;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.4;
 }
 
-/* DESKRIPSI KARTU */
+/* =========================================
+   DESKRIPSI KARTU
+========================================= */
 
 .program-description {
   margin: 0;
   padding: 0;
+
   color: #52667b;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* =========================================
-   WARNA KARTU
+   WARNA IKON PROGRAM
 ========================================= */
 
 /* PINK */
@@ -217,21 +238,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
   min-height: 42px;
   padding: 10px 22px;
+
   border-radius: 100px;
   background: #d41491;
   color: #ffffff;
+
   font-size: 13px;
   font-weight: 800;
   line-height: 1.4;
   text-decoration: none;
+
   box-shadow: 0 6px 18px rgba(212, 20, 145, 0.14);
+
   transition:
     background 0.2s ease,
     transform 0.2s ease;
 }
+
+/* HOVER TOMBOL */
 
 .program-button:hover {
   background: #b9107d;
@@ -239,10 +267,14 @@
   transform: translateY(-2px);
 }
 
+/* PANAH TOMBOL */
+
 .program-button span {
   font-size: 17px;
   line-height: 1;
 }
+
+/* FOKUS KEYBOARD */
 
 .program-button:focus-visible {
   outline: 3px solid #008dd2;
@@ -251,16 +283,22 @@
 
 /* =========================================
    RESPONSIVE TABLET
+   MAX WIDTH 1000PX
 ========================================= */
 
 @media (max-width: 1000px) {
+
   .program-section {
     padding: 30px 0;
   }
 
+  /* CONTAINER */
+
   .program-container {
     padding: 0 24px;
   }
+
+  /* HEADER */
 
   .program-heading {
     margin-bottom: 20px;
@@ -270,6 +308,8 @@
     font-size: 24px;
   }
 
+  /* GRID 2 KOLOM */
+
   .program-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
@@ -278,49 +318,69 @@
 
 /* =========================================
    RESPONSIVE MOBILE
+   MAX WIDTH 700PX
 ========================================= */
 
 @media (max-width: 700px) {
+
   .program-section {
     padding: 26px 0;
   }
+
+  /* CONTAINER */
 
   .program-container {
     padding: 0 20px;
   }
 
+  /* HEADER */
+
   .program-heading {
     margin-bottom: 18px;
   }
+
+  /* LABEL PINK */
 
   .program-eyebrow {
     margin-bottom: 8px;
     font-size: 11px;
   }
 
+  /* JUDUL UTAMA */
+
   .program-heading h2 {
     margin-bottom: 10px;
     font-size: 22px;
   }
+
+  /* PENGANTAR */
 
   .program-intro {
     font-size: 13px;
     line-height: 1.65;
   }
 
+  /* GRID 1 KOLOM */
+
   .program-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
+
+  /* KARTU */
 
   .program-card {
     padding: 16px;
   }
 
+  /* HEADING KARTU */
+
   .program-card-heading {
     gap: 10px;
     margin-bottom: 9px;
   }
+
+  /* IKON */
 
   .program-icon {
     width: 38px;
@@ -332,13 +392,21 @@
     height: 21px;
   }
 
+  /* JUDUL KARTU */
+
   .program-card h3 {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.4;
   }
 
+  /* DESKRIPSI KARTU */
+
   .program-description {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.7;
   }
+
+  /* TOMBOL */
 
   .program-actions {
     margin-top: 20px;
@@ -347,19 +415,40 @@
 
 /* =========================================
    MOBILE KECIL
+   MAX WIDTH 400PX
 ========================================= */
 
 @media (max-width: 400px) {
+
+  /* CONTAINER */
+
   .program-container {
     padding: 0 16px;
   }
+
+  /* JUDUL UTAMA */
 
   .program-heading h2 {
     font-size: 21px;
   }
 
+  /* KARTU */
+
   .program-card {
     padding: 15px;
+  }
+
+  /* JUDUL KARTU */
+
+  .program-card h3 {
+    font-size: 15px;
+  }
+
+  /* DESKRIPSI */
+
+  .program-description {
+    font-size: 13px;
+    line-height: 1.7;
   }
 }
 
@@ -368,6 +457,7 @@
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .program-card,
   .program-button {
     transition: none;
