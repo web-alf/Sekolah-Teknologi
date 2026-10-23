@@ -6,7 +6,7 @@
 
 .keunggulan-section {
   width: 100%;
-  padding: 5px 0 25px;
+  padding: 64px 0 72px;
   margin: 0;
 
   background: linear-gradient(
@@ -41,26 +41,29 @@
 .keunggulan-heading {
   display: block;
   width: 100%;
-  max-width: 100%;
+  max-width: 850px;
 
-  margin: 0 0 30px;
+  margin: 0 auto 40px;
   padding: 0;
+  text-align: center;
 }
 
 /* LABEL PINK */
 
 .keunggulan-section .keunggulan-eyebrow {
-  display: block;
+  display: inline-block;
 
-  margin: 0 0 12px;
-  padding: 0;
+  margin: 0 0 14px;
+  padding: 5px 10px;
 
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
   color: #d41491;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 /* JUDUL UTAMA */
@@ -69,7 +72,7 @@
   width: 100%;
   max-width: 100%;
 
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   padding: 0;
 
   color: #102b50;
@@ -95,13 +98,13 @@
   width: 100%;
   max-width: 840px;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   color: #64748b;
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.85;
 }
 
 /* ===================================
@@ -112,9 +115,9 @@
   display: grid;
 
   width: 100%;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 18px;
+  gap: 22px;
   margin: 0;
   padding: 0;
 }
@@ -125,10 +128,10 @@
 
 .keunggulan-card {
   min-width: 0;
-  min-height: 260px;
+  min-height: 0;
 
   margin: 0;
-  padding: 22px;
+  padding: 26px;
 
   background: #ffffff;
 
@@ -158,8 +161,8 @@
   display: flex;
   align-items: center;
 
-  gap: 14px;
-  margin: 0 0 16px;
+  gap: 16px;
+  margin: 0 0 20px;
 }
 
 /* NOMOR */
@@ -243,7 +246,7 @@
 =================================== */
 
 .keunggulan-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   padding: 0;
 
   color: #102b50;
@@ -265,7 +268,7 @@
 
   font-size: 13px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* ===================================
@@ -276,8 +279,8 @@
 @media (max-width: 1000px) {
 
   .keunggulan-section {
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding-top: 56px;
+    padding-bottom: 60px;
   }
 
   .keunggulan-section .keunggulan-container {
@@ -288,7 +291,7 @@
   /* HEADER */
 
   .keunggulan-heading {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
   }
 
   .keunggulan-section .keunggulan-heading h2 {
@@ -310,8 +313,8 @@
   /* KARTU */
 
   .keunggulan-card {
-    min-height: 230px;
-    padding: 20px;
+    min-height: 0;
+    padding: 24px;
   }
 }
 
@@ -325,7 +328,7 @@
   .keunggulan-section {
     width: 100%;
 
-    padding: 5px 0 40px;
+    padding: 48px 0 52px;
     margin: 0;
   }
 
@@ -339,7 +342,7 @@
   /* HEADER */
 
   .keunggulan-heading {
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   /* LABEL KECIL PINK */
@@ -347,9 +350,9 @@
   .keunggulan-section .keunggulan-eyebrow {
     margin-bottom: 12px;
 
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.5;
-    letter-spacing: 1.4px;
+    letter-spacing: 1px;
   }
 
   /* JUDUL UTAMA */
@@ -369,21 +372,21 @@
     max-width: 100%;
 
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   /* GRID 1 KOLOM */
 
   .keunggulan-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 
   /* KARTU */
 
   .keunggulan-card {
     min-height: auto;
-    padding: 20px;
+    padding: 22px;
   }
 
   .keunggulan-card-icons {
@@ -410,7 +413,7 @@
   /* JUDUL KARTU */
 
   .keunggulan-card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     font-size: 16px;
     line-height: 1.4;
@@ -420,7 +423,7 @@
 
   .keunggulan-card p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 }
 
@@ -438,7 +441,7 @@
 
   .keunggulan-section .keunggulan-eyebrow {
     font-size: 10px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
   }
 
   .keunggulan-section .keunggulan-heading h2 {
@@ -453,7 +456,7 @@
   /* KARTU */
 
   .keunggulan-card {
-    padding: 18px;
+    padding: 20px;
   }
 
   .keunggulan-card-icons {
@@ -493,7 +496,7 @@
   }
 
   .keunggulan-card {
-    padding: 14px;
+    padding: 16px;
     border-radius: 12px;
   }
 

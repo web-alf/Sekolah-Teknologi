@@ -50,7 +50,7 @@
 .faq-section .faq-heading {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   width: 100%;
   gap: 0;
@@ -63,6 +63,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 /* =========================================
@@ -70,17 +71,19 @@
 ========================================= */
 
 .faq-section .faq-eyebrow {
-  display: block;
+  display: inline-block;
 
-  margin: 0 0 12px;
-  padding: 0;
+  margin: 0 0 14px;
+  padding: 5px 10px;
 
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
   color: #d41491;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 /* =========================================
@@ -122,13 +125,14 @@
   width: 100%;
   max-width: 850px;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   color: #64748b;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
+  text-align: center;
 }
 
 /* =========================================
@@ -314,7 +318,7 @@
 
   color: #64748b;
 
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -346,7 +350,7 @@
   /* LABEL */
 
   .faq-section .faq-eyebrow {
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: 12px;
   }
 
@@ -407,7 +411,7 @@
   .faq-section .faq-heading {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     gap: 0;
     margin-bottom: 24px;
@@ -416,11 +420,11 @@
   /* LABEL PINK */
 
   .faq-section .faq-eyebrow {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.4;
-    letter-spacing: 1.4px;
+    letter-spacing: 1px;
   }
 
   /* JUDUL FAQ */

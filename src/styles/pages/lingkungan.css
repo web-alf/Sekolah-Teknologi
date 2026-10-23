@@ -16,13 +16,14 @@
   align-items: center;
 
   width: 100%;
-  min-height: calc(100vh - 78px);
-  min-height: calc(100dvh - 78px);
+  min-height: auto;
 
   margin: 0;
-  padding: 32px 0;
+  padding: 80px 0;
 
-  background: #f2faff;
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(0, 141, 210, 0.08), transparent 34%),
+    linear-gradient(135deg, #f2faff 0%, #ffffff 58%, #fff7fc 100%);
   box-sizing: border-box;
 }
 
@@ -51,13 +52,16 @@
 ========================================= */
 
 .lingkungan-content {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   max-width: 900px;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
-  text-align: left;
+  text-align: center;
 }
 
 /* =========================================
@@ -67,16 +71,18 @@
 .lingkungan-label {
   display: inline-block;
 
-  margin: 0 0 10px;
-  padding: 0;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
 
   color: #d41491;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 /* =========================================
@@ -87,7 +93,7 @@
 .lingkungan-content h2 {
   max-width: 850px;
 
-  margin: 0 0 14px;
+  margin: 0 auto 18px;
   padding: 0;
 
   color: #102b50;
@@ -98,39 +104,54 @@
   line-height: 1.25;
   letter-spacing: -0.5px;
 
-  text-align: left;
+  text-align: center;
 }
 
 /* AKSEN BIRU */
 
 .lingkungan-content h2 span {
-  display: inline;
+  display: block;
   color: #008dd2;
 }
 
+.lingkungan-content h2::after {
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 16px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #008dd2, #d41491);
+  content: "";
+}
+
 /* =========================================
-   PARAGRAF DESKRIPSI
+   KOTAK DESKRIPSI
 ========================================= */
 
-.lingkungan-content p {
-  max-width: 800px;
+.lingkungan-copy {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 22px 28px;
 
-  margin: 0 0 14px;
-  padding: 0;
-
-  color: #52667b;
-
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-
+  border: 1px solid rgba(16, 43, 80, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 32px rgba(16, 43, 80, 0.055);
   text-align: left;
 }
 
-/* HILANGKAN MARGIN PARAGRAF TERAKHIR */
+.lingkungan-copy p {
+  margin: 0;
+  color: #52667b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
 
-.lingkungan-content p:last-child {
-  margin-bottom: 0;
+.lingkungan-copy p + p {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8eef5;
 }
 
 /* =========================================
@@ -157,25 +178,27 @@
 .lingkungan-highlight {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 
-  gap: 12px;
+  gap: 14px;
 
   min-width: 0;
-  padding: 20px;
+  min-height: 150px;
+  padding: 22px 18px;
 
-  background: #ffffff;
-  border: 1px solid #e8eef5;
-  border-radius: 16px;
+  border: 1px solid rgba(16, 43, 80, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
 
   color: #102b50;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
+  text-align: center;
 
-  box-shadow: 0 6px 22px rgba(16, 43, 80, 0.05);
+  box-shadow: 0 8px 24px rgba(16, 43, 80, 0.06);
 
   transition:
     transform 0.25s ease,
@@ -186,7 +209,7 @@
 .lingkungan-highlight:hover {
   transform: translateY(-4px);
 
-  border-color: #b8e5fa;
+  border-color: rgba(0, 141, 210, 0.3);
 
   box-shadow: 0 12px 28px rgba(16, 43, 80, 0.1);
 }
@@ -202,14 +225,15 @@
 
   flex-shrink: 0;
 
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
 
   background: #eaf7ff;
-  border-radius: 12px;
+  border: 1px solid #d9effa;
+  border-radius: 15px;
 
   color: #008dd2;
-  font-size: 22px;
+  font-size: 23px;
 }
 
 /* JIKA IKON MENGGUNAKAN SVG */
@@ -226,7 +250,7 @@
 @media (max-width: 1000px) {
   .lingkungan-section {
     min-height: auto;
-    padding: 40px 0;
+    padding: 64px 0;
   }
 
   .lingkungan-container {
@@ -244,11 +268,8 @@
     line-height: 1.25;
   }
 
-  .lingkungan-content p {
+  .lingkungan-copy {
     max-width: 100%;
-
-    font-size: 14px;
-    line-height: 1.7;
   }
 
   .lingkungan-highlights {
@@ -270,7 +291,7 @@
 @media (max-width: 700px) {
   .lingkungan-section {
     min-height: auto;
-    padding: 30px 0;
+    padding: 52px 0;
   }
 
   .lingkungan-container {
@@ -280,10 +301,10 @@
   /* LABEL */
 
   .lingkungan-label {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 
-    font-size: 11px;
-    letter-spacing: 1.2px;
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
   /* JUDUL */
@@ -300,15 +321,13 @@
 
   /* DESKRIPSI */
 
-  .lingkungan-content p {
-    margin-bottom: 12px;
-
-    font-size: 13px;
-    line-height: 1.65;
+  .lingkungan-copy {
+    padding: 18px;
   }
 
-  .lingkungan-content p:last-child {
-    margin-bottom: 0;
+  .lingkungan-copy p {
+    font-size: 13px;
+    line-height: 1.75;
   }
 
   /* GRID */
@@ -325,8 +344,9 @@
   .lingkungan-highlight {
     gap: 10px;
 
-    padding: 16px;
-    border-radius: 14px;
+    min-height: 132px;
+    padding: 16px 12px;
+    border-radius: 16px;
 
     font-size: 13px;
     line-height: 1.5;
@@ -335,8 +355,8 @@
   /* IKON */
 
   .lingkungan-icon {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     font-size: 20px;
   }
@@ -357,25 +377,26 @@
   }
 
   .lingkungan-content h2 {
-    font-size: 21px;
+    font-size: 20px;
+    margin-bottom: 16px;
   }
 
   .lingkungan-highlights {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 9px;
   }
 
   .lingkungan-highlight {
-    flex-direction: row;
-    align-items: center;
-
-    gap: 12px;
-    padding: 14px 16px;
+    min-height: 122px;
+    gap: 8px;
+    padding: 14px 10px;
+    font-size: 12px;
   }
 
   .lingkungan-icon {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    font-size: 19px;
   }
 }
 
@@ -385,7 +406,7 @@
 
 @media (min-width: 1001px) and (max-height: 700px) {
   .lingkungan-section {
-    padding: 24px 0;
+    padding: 52px 0;
   }
 
   .lingkungan-highlights {

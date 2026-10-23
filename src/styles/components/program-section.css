@@ -7,7 +7,7 @@
 .program-section {
   width: 100%;
   margin: 0;
-  padding: 32px 0 36px;
+  padding: 64px 0 72px;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -37,29 +37,32 @@
 .program-heading {
   width: 100%;
   max-width: 850px;
-  margin: 0 0 22px;
+  margin: 0 auto 38px;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 /* LABEL PROGRAM UNGGULAN */
 
 .program-eyebrow {
-  margin: 0 0 9px;
-  padding: 0;
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
   color: #d41491;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 /* JUDUL UTAMA */
 
 .program-heading h2 {
   max-width: 850px;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   padding: 0;
 
   color: #102b50;
@@ -79,13 +82,13 @@
 
 .program-intro {
   max-width: 800px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   color: #52667b;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.8;
 }
 
 /* =========================================
@@ -94,10 +97,10 @@
 
 .program-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 
-  gap: 14px;
+  gap: 20px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -112,7 +115,7 @@
   flex-direction: column;
 
   min-width: 0;
-  padding: 18px;
+  padding: 22px;
 
   background: #ffffff;
   border: 1px solid #e3edf5;
@@ -142,8 +145,8 @@
   display: flex;
   align-items: center;
 
-  gap: 11px;
-  margin: 0 0 11px;
+  gap: 13px;
+  margin: 0 0 15px;
 }
 
 /* =========================================
@@ -182,7 +185,7 @@
   color: #102b50;
   font-size: 14px;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* =========================================
@@ -196,7 +199,7 @@
   color: #52667b;
   font-size: 13px;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.8;
 }
 
 /* =========================================
@@ -289,7 +292,7 @@
 @media (max-width: 1000px) {
 
   .program-section {
-    padding: 30px 0;
+    padding: 52px 0;
   }
 
   /* CONTAINER */
@@ -301,7 +304,7 @@
   /* HEADER */
 
   .program-heading {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 
   .program-heading h2 {
@@ -312,7 +315,7 @@
 
   .program-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+    gap: 18px;
   }
 }
 
@@ -324,7 +327,7 @@
 @media (max-width: 700px) {
 
   .program-section {
-    padding: 26px 0;
+    padding: 44px 0;
   }
 
   /* CONTAINER */
@@ -336,14 +339,14 @@
   /* HEADER */
 
   .program-heading {
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
 
   /* LABEL PINK */
 
   .program-eyebrow {
-    margin-bottom: 8px;
-    font-size: 11px;
+    margin-bottom: 12px;
+    font-size: 10px;
   }
 
   /* JUDUL UTAMA */
@@ -357,27 +360,27 @@
 
   .program-intro {
     font-size: 13px;
-    line-height: 1.65;
+    line-height: 1.75;
   }
 
   /* GRID 1 KOLOM */
 
   .program-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
+    gap: 16px;
   }
 
   /* KARTU */
 
   .program-card {
-    padding: 16px;
+    padding: 20px;
   }
 
   /* HEADING KARTU */
 
   .program-card-heading {
-    gap: 10px;
-    margin-bottom: 9px;
+    gap: 12px;
+    margin-bottom: 13px;
   }
 
   /* IKON */
@@ -403,7 +406,7 @@
 
   .program-description {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   /* TOMBOL */
@@ -435,7 +438,7 @@
   /* KARTU */
 
   .program-card {
-    padding: 15px;
+    padding: 18px;
   }
 
   /* JUDUL KARTU */
@@ -448,7 +451,7 @@
 
   .program-description {
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 }
 

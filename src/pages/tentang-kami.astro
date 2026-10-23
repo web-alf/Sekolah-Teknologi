@@ -90,7 +90,7 @@ const philosophies = [
     <main>
 
       <!-- =====================================
-           LATAR BELAKANG DAN PERJALANAN
+           Latar Belakang dan Perjalanan
       ===================================== -->
       <section class="about-hero" id="latar-belakang">
         <div class="about-container">
@@ -98,11 +98,12 @@ const philosophies = [
           <div class="about-hero-content">
 
             <p class="about-eyebrow">
-              LATAR BELAKANG DAN PERJALANAN
+              Latar Belakang dan Perjalanan
             </p>
 
             <h1>
-              Dari Ruang Kelas Al-Qur’an ke Ruang Kelas Masa Depan
+              <span class="about-title-lead">Dari Ruang Kelas Al-Qur’an ke</span>
+              <span class="about-title-highlight">Ruang Kelas Masa Depan</span>
             </h1>
 
             <div class="about-introduction">
@@ -145,40 +146,38 @@ const philosophies = [
       </section>
 
       <!-- =====================================
-           VISI
+           VISI & MISI
       ===================================== -->
-      <section class="about-vision" id="visi">
-        <div class="about-container">
-
-          <div class="about-vision-card">
-            <h2>Visi</h2>
-
-            <p>
-              Menjadi sekolah rujukan yang melahirkan generasi Qur’ani
-              pencipta teknologi: cakap berpikir, terampil berkarya,
-              dan amanah dalam memberi manfaat bagi umat dan bangsa.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- =====================================
-           MISI
-      ===================================== -->
-      <section class="about-mission" id="misi">
+      <section class="about-vision-mission" id="visi">
         <div class="about-container">
 
           <div class="about-section-heading">
-            <h2>Misi</h2>
+            <h2>Visi &amp; Misi</h2>
           </div>
 
-          <ol class="about-mission-list">
-            {missions.map((mission) => (
-              <li>{mission}</li>
-            ))}
-          </ol>
+          <div class="about-vision-mission-grid">
+            <article class="about-vision-card">
+              <h3>Visi</h3>
 
+              <p>
+                Menjadi sekolah rujukan yang melahirkan generasi Qur’ani
+                pencipta teknologi: cakap berpikir, terampil berkarya,
+                dan amanah dalam memberi manfaat bagi umat dan bangsa.
+              </p>
+            </article>
+
+            <div class="about-mission-content" id="misi">
+              <div class="about-mission-heading">
+                <h3>Misi</h3>
+              </div>
+
+              <ol class="about-mission-list">
+                {missions.map((mission) => (
+                  <li>{mission}</li>
+                ))}
+              </ol>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -189,7 +188,7 @@ const philosophies = [
         <div class="about-container">
 
           <div class="about-section-heading">
-            <h2>Nilai inti</h2>
+            <h2>Nilai Inti</h2>
           </div>
 
           <div class="about-values-grid">

@@ -46,13 +46,18 @@
 /* LABEL KECIL */
 
 .hero-label {
-  margin: 0 0 16px;
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 4px 8px;
 
-  color: #008dd2;
-  font-size: 11px;
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
+  color: #d41491;
+  font-size: 9px;
   font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: 2px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
 }
 
 /* HEADLINE */
@@ -242,12 +247,12 @@
   /* LABEL */
 
   .hero-label {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 800;
-    line-height: 1.6;
-    letter-spacing: 1.5px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
   }
 
   /* JUDUL */
@@ -332,11 +337,11 @@
   /* LABEL */
 
   .hero-label {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
-    font-size: 9px;
+    font-size: 8px;
     line-height: 1.5;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
   }
 
   /* JUDUL */
@@ -393,8 +398,8 @@
   }
 
   .hero-label {
-    font-size: 8px;
-    letter-spacing: 1px;
+    font-size: 7px;
+    letter-spacing: 0.4px;
   }
 
   .hero-title {

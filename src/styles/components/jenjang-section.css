@@ -20,7 +20,7 @@
   min-height: calc(100dvh - 50px);
 
   margin: 0;
-  padding: 50px 0;
+  padding: 72px 0;
 
   background: #ffffff;
   box-sizing: border-box;
@@ -50,22 +50,26 @@
 
 .jenjang-heading {
   max-width: 850px;
-  margin: 0 0 28px;
-  text-align: left;
+  margin: 0 auto 38px;
+  text-align: center;
 }
 
 /* LABEL KECIL */
 
 .jenjang-heading .jenjang-eyebrow {
-  margin: 0 0 12px;
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 10px;
 
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
   color: #d41491;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 /* JUDUL UTAMA */
@@ -73,7 +77,7 @@
 .jenjang-heading h2 {
   max-width: 100%;
 
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   padding: 0;
 
   color: #102b50;
@@ -93,14 +97,14 @@
 .jenjang-heading .jenjang-intro {
   max-width: 780px;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   color: #52667b;
 
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.85;
 }
 
 /* =========================================
@@ -111,7 +115,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 18px;
+  gap: 24px;
 
   width: 100%;
   margin: 0;
@@ -131,7 +135,7 @@
   min-width: 0;
   height: 100%;
 
-  padding: 24px;
+  padding: 28px;
 
   background: #ffffff;
 
@@ -160,8 +164,8 @@
   display: flex;
   align-items: center;
 
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 16px;
+  margin-bottom: 22px;
 }
 
 /* IKON */
@@ -222,13 +226,13 @@
 .jenjang-description {
   flex-grow: 1;
 
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 
   color: #52667b;
 
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.85;
 }
 
 /* =========================================
@@ -325,7 +329,7 @@
 @media (max-width: 1000px) {
   .jenjang-section {
     min-height: auto;
-    padding: 55px 0;
+    padding: 64px 0;
   }
 
   .jenjang-section .jenjang-container {
@@ -333,7 +337,7 @@
   }
 
   .jenjang-heading {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   .jenjang-heading h2 {
@@ -341,11 +345,11 @@
   }
 
   .jenjang-grid {
-    gap: 14px;
+    gap: 18px;
   }
 
   .jenjang-card {
-    padding: 20px;
+    padding: 24px;
   }
 
   .jenjang-card-top {
@@ -380,7 +384,7 @@
 @media (max-width: 700px) {
   .jenjang-section {
     min-height: auto;
-    padding: 45px 0;
+    padding: 52px 0;
   }
 
   .jenjang-section .jenjang-container {
@@ -388,14 +392,14 @@
   }
 
   .jenjang-heading {
-    margin-bottom: 22px;
+    margin-bottom: 28px;
   }
 
   .jenjang-heading .jenjang-eyebrow {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
-    font-size: 11px;
-    letter-spacing: 1.2px;
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
   .jenjang-heading h2 {
@@ -407,16 +411,16 @@
 
   .jenjang-heading .jenjang-intro {
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .jenjang-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 18px;
   }
 
   .jenjang-card {
-    padding: 20px;
+    padding: 22px;
     border-radius: 16px;
   }
 
@@ -429,10 +433,10 @@
   }
 
   .jenjang-description {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .jenjang-link {

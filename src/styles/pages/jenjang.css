@@ -41,6 +41,7 @@
 .jenjang-page .jenjang-hero {
   width: 100%;
   padding: 26px 0;
+  text-align: center;
   background: linear-gradient(
     120deg,
     #ffffff 0%,
@@ -49,18 +50,22 @@
 }
 
 .jenjang-page .jenjang-eyebrow {
-  margin: 0 0 9px;
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 1px solid rgba(212, 20, 145, 0.25);
+  border-radius: 999px;
+  background: rgba(212, 20, 145, 0.07);
   color: var(--pink);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 .jenjang-page .jenjang-hero h1 {
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   color: var(--text-primary);
   font-size: 28px;
   font-weight: 800;
@@ -228,6 +233,7 @@
   font-size: 16px;
   font-weight: 800;
   line-height: 1.35;
+  text-align: center;
 }
 
 .jenjang-page .jenjang-table-scroll {
@@ -386,7 +392,7 @@
   border-radius: 50%;
   background: var(--blue);
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
 }
 
@@ -460,8 +466,8 @@
   }
 
   .jenjang-page .jenjang-eyebrow {
-    margin-bottom: 8px;
-    font-size: 11px;
+    margin-bottom: 12px;
+    font-size: 10px;
   }
 
   .jenjang-page .jenjang-content {
