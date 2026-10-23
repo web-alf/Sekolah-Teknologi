@@ -736,3 +736,116 @@
     transition: none;
   }
 }
+/* =========================================
+   FINAL POLISH - JENJANG & KURIKULUM
+   DESKTOP + MOBILE
+========================================= */
+
+/* DESKTOP: teks tabel lebih nyaman dibaca */
+@media (min-width: 1001px) {
+  .jenjang-page .jenjang-table th,
+  .jenjang-page .jenjang-table td {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Kartu informasi tidak dipaksa sama tinggi */
+  .jenjang-page .jenjang-bottom-grid {
+    align-items: start;
+  }
+
+  .jenjang-page .jenjang-info-card {
+    height: auto;
+  }
+}
+
+/* TABLET */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .jenjang-page .jenjang-intro > p:last-child {
+    font-size: 14px;
+  }
+
+  .jenjang-page .jenjang-table th,
+  .jenjang-page .jenjang-table td {
+    font-size: 13px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  /* Judul utama */
+  .jenjang-page .jenjang-hero h1 {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  /* Tab SD, SMP, SMA */
+  .jenjang-page .jenjang-tab {
+    font-size: 15px;
+  }
+
+  .jenjang-page .jenjang-tab span {
+    font-size: 11px;
+  }
+
+  /* Judul jenjang */
+  .jenjang-page .jenjang-intro h2 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  /* Deskripsi jenjang */
+  .jenjang-page .jenjang-intro > p:last-child {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Kartu area belajar */
+  .jenjang-page .jenjang-table tbody tr {
+    padding: 16px;
+  }
+
+  /* Judul kartu */
+  .jenjang-page .jenjang-table tbody th {
+    font-size: 14px;
+  }
+
+  /* Isi materi */
+  .jenjang-page .jenjang-table tbody td {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* Label kelas atau materi */
+  .jenjang-page .jenjang-table tbody td::before {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  /* Kartu jadwal dan profil lulusan */
+  .jenjang-page .jenjang-info-card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .jenjang-page .jenjang-info-card h3 {
+    font-size: 16px;
+  }
+
+  .jenjang-page .jenjang-schedule li,
+  .jenjang-page .jenjang-check-list li {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .jenjang-page .jenjang-hours {
+    font-size: 13px;
+  }
+
+  /* Catatan peminatan SMA */
+  .jenjang-page .jenjang-table-card > p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}

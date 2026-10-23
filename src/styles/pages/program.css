@@ -836,3 +836,265 @@
     padding-bottom: 62px;
   }
 }
+/* =========================================
+   FINAL REVISI HERO HALAMAN PROGRAM
+   Desktop & Mobile
+========================================= */
+
+.program-page .program-hero {
+  min-height: auto;
+  padding: 85px 0 90px;
+
+  background: linear-gradient(
+    115deg,
+    #eef9ff 0%,
+    #ffffff 55%,
+    #fff1f8 100%
+  );
+}
+
+.program-page .program-hero .program-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.program-page .program-hero .program-eyebrow {
+  margin: 0 0 14px;
+
+  color: #d41491;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.program-page .program-hero h1 {
+  max-width: 1000px;
+  margin: 0 0 18px;
+
+  color: #102b50;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.program-page .program-hero h1 span {
+  color: #008dd2;
+}
+
+.program-page .program-hero-description {
+  max-width: 880px;
+  margin: 0;
+
+  color: #52667b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.program-page .program-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.program-page .program-btn-primary,
+.program-page .program-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 44px;
+  padding: 11px 20px;
+
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.program-page .program-btn-primary {
+  background: #d41491;
+  border: 1px solid #d41491;
+  color: #ffffff;
+}
+
+.program-page .program-btn-primary:hover {
+  background: #b9107d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.program-page .program-btn-secondary {
+  background: #ffffff;
+  border: 1px solid #dce7f0;
+  color: #102b50;
+}
+
+.program-page .program-btn-secondary:hover {
+  border-color: #008dd2;
+  color: #008dd2;
+  transform: translateY(-2px);
+}
+
+.program-page .program-btn-primary:focus-visible,
+.program-page .program-btn-secondary:focus-visible {
+  outline: 3px solid #008dd2;
+  outline-offset: 3px;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .program-page .program-hero {
+    padding: 70px 0 75px;
+  }
+
+  .program-page .program-hero .program-container {
+    padding: 0 24px;
+  }
+
+  .program-page .program-hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .program-page .program-hero {
+    padding: 55px 0 60px;
+  }
+
+  .program-page .program-hero .program-container {
+    padding: 0 20px;
+  }
+
+  .program-page .program-hero .program-eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .program-page .program-hero h1 {
+    margin-bottom: 15px;
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .program-page .program-hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .program-page .program-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .program-page .program-btn-primary,
+  .program-page .program-btn-secondary {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* MOBILE KECIL */
+@media (max-width: 400px) {
+  .program-page .program-hero .program-container {
+    padding: 0 16px;
+  }
+
+  .program-page .program-hero h1 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .program-page .program-btn-primary,
+  .program-page .program-btn-secondary {
+    transition: none;
+  }
+}
+/* =========================================
+   FINAL POLISH
+   PROGRAM & EKSTRAKURIKULER
+========================================= */
+
+/* JARAK SECTION */
+.program-page .program-section {
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+
+.program-page .program-extracurricular-section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+/* DESKRIPSI KARTU */
+.program-page .program-card-description {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* DAFTAR EKSTRAKURIKULER */
+.program-page .program-extra-list li {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* KARTU KATEGORI KE-5 MELEBAR */
+@media (min-width: 1001px) {
+  .program-page .program-extra-grid
+  .program-extra-card:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+/* TABLET */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .program-page .program-extra-grid
+  .program-extra-card:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .program-page .program-section {
+    padding-top: 42px;
+    padding-bottom: 52px;
+  }
+
+  .program-page .program-extracurricular-section {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .program-page .program-card-description,
+  .program-page .program-extra-list li,
+  .program-page .program-extra-note p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .program-page .program-extra-grid
+  .program-extra-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
