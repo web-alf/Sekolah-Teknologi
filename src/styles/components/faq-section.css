@@ -1,19 +1,17 @@
 
 /* =========================================
    FAQ SECTION - SEKOLAH TEKNOLOGI
-   FULL REVISI - 1 LAYAR LAPTOP
+   RESPONSIVE DESKTOP, TABLET & MOBILE
 ========================================= */
 
 .faq-section {
   width: 100%;
-  min-height: calc(100vh - 50px);
-  min-height: calc(100dvh - 50px);
+  min-height: auto;
 
-  display: flex;
-  align-items: center;
+  display: block;
 
   margin: 0;
-  padding: 90px 0 100px;
+  padding: 65px 0 75px;
 
   background: linear-gradient(
     115deg,
@@ -22,11 +20,14 @@
     #f1faff 100%
   );
 
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
 .faq-section,
-.faq-section * {
+.faq-section *,
+.faq-section *::before,
+.faq-section *::after {
   box-sizing: border-box;
 }
 
@@ -37,6 +38,7 @@
 .faq-section .faq-container {
   width: 100%;
   max-width: 1280px;
+
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -54,6 +56,12 @@
   gap: 0;
 
   margin: 0 0 30px;
+  padding: 0;
+}
+
+.faq-section .faq-heading-left {
+  width: 100%;
+  margin: 0;
   padding: 0;
 }
 
@@ -77,7 +85,6 @@
 
 /* =========================================
    JUDUL FAQ
-   SAMA DENGAN SECTION LAIN
 ========================================= */
 
 .faq-section .faq-heading h2 {
@@ -90,6 +97,7 @@
   padding: 0;
 
   color: #102b50;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(22px, 2.1vw, 28px);
   font-weight: 800;
@@ -97,7 +105,7 @@
   letter-spacing: -0.5px;
 }
 
-/* WARNA BIRU PADA JUDUL */
+/* AKSEN BIRU */
 
 .faq-section .faq-heading h2 span {
   display: inline;
@@ -105,7 +113,7 @@
 }
 
 /* =========================================
-   PARAGRAF PENJELASAN
+   DESKRIPSI PENGANTAR
 ========================================= */
 
 .faq-section .faq-intro {
@@ -124,7 +132,7 @@
 }
 
 /* =========================================
-   FAQ GRID
+   GRID FAQ DESKTOP
 ========================================= */
 
 .faq-section .faq-grid {
@@ -134,6 +142,7 @@
 
   gap: 18px;
   width: 100%;
+
   margin: 0;
   padding: 0;
 }
@@ -151,7 +160,7 @@
 }
 
 /* =========================================
-   FAQ ITEM
+   KARTU FAQ
 ========================================= */
 
 .faq-section .faq-item {
@@ -159,23 +168,31 @@
   overflow: hidden;
 
   background: #ffffff;
+
   border: 1px solid #e7eef5;
   border-radius: 14px;
 
-  box-shadow: 0 4px 18px rgba(16, 43, 80, 0.04);
+  box-shadow:
+    0 4px 18px rgba(16, 43, 80, 0.04);
 
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
+/* HOVER */
+
 .faq-section .faq-item:hover {
   border-color: #bfe6fa;
 }
 
+/* KARTU TERBUKA */
+
 .faq-section .faq-item[open] {
   border-color: #d7eaf6;
-  box-shadow: 0 8px 24px rgba(16, 43, 80, 0.06);
+
+  box-shadow:
+    0 8px 24px rgba(16, 43, 80, 0.06);
 }
 
 /* =========================================
@@ -188,10 +205,12 @@
   justify-content: space-between;
 
   gap: 18px;
+
   min-height: 62px;
   padding: 18px 20px;
 
   color: #102b50;
+
   font-size: 14px;
   font-weight: 800;
   line-height: 1.45;
@@ -200,6 +219,8 @@
   list-style: none;
 }
 
+/* HILANGKAN MARKER DEFAULT */
+
 .faq-section .faq-question::-webkit-details-marker {
   display: none;
 }
@@ -207,6 +228,16 @@
 .faq-section .faq-question::marker {
   content: "";
 }
+
+/* TEKS PERTANYAAN */
+
+.faq-section .faq-question-text {
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+/* FOKUS KEYBOARD */
 
 .faq-section .faq-question:focus-visible {
   outline: 2px solid #008dd2;
@@ -220,6 +251,7 @@
 
 .faq-section .faq-toggle {
   position: relative;
+
   display: inline-block;
   flex-shrink: 0;
 
@@ -227,9 +259,12 @@
   height: 18px;
 }
 
+/* GARIS IKON */
+
 .faq-section .faq-toggle::before,
 .faq-section .faq-toggle::after {
   content: "";
+
   position: absolute;
 
   top: 50%;
@@ -239,25 +274,34 @@
   border-radius: 2px;
 
   transform: translate(-50%, -50%);
-  transition: transform 0.2s ease;
+
+  transition:
+    transform 0.2s ease;
 }
+
+/* GARIS HORIZONTAL */
 
 .faq-section .faq-toggle::before {
   width: 12px;
   height: 2px;
 }
 
+/* GARIS VERTIKAL */
+
 .faq-section .faq-toggle::after {
   width: 2px;
   height: 12px;
 }
 
+/* SAAT TERBUKA: PLUS JADI MINUS */
+
 .faq-section .faq-item[open] .faq-toggle::after {
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform:
+    translate(-50%, -50%) rotate(90deg);
 }
 
 /* =========================================
-   JAWABAN
+   JAWABAN FAQ
 ========================================= */
 
 .faq-section .faq-answer {
@@ -266,56 +310,74 @@
 
 .faq-section .faq-answer p {
   margin: 0;
+  padding: 0;
 
   color: #64748b;
+
   font-size: 13px;
+  font-weight: 400;
   line-height: 1.75;
 }
 
 /* =========================================
    RESPONSIVE TABLET
+   MAX WIDTH 1000PX
 ========================================= */
 
 @media (max-width: 1000px) {
 
   .faq-section {
     min-height: auto;
-    padding-top: 75px;
-    padding-bottom: 85px;
+    padding: 60px 0 70px;
   }
 
+  /* CONTAINER */
+
   .faq-section .faq-container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px;
   }
+
+  /* HEADER */
 
   .faq-section .faq-heading {
     margin-bottom: 26px;
   }
 
+  /* LABEL */
+
   .faq-section .faq-eyebrow {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 12px;
   }
+
+  /* JUDUL */
 
   .faq-section .faq-heading h2 {
     font-size: 24px;
     margin-bottom: 14px;
   }
 
+  /* PENGANTAR */
+
   .faq-section .faq-intro {
     max-width: 770px;
     font-size: 14px;
   }
 
+  /* GRID */
+
   .faq-section .faq-grid {
     gap: 14px;
   }
 
+  /* PERTANYAAN */
+
   .faq-section .faq-question {
     padding: 16px;
-    font-size: 13px;
+    font-size: 14px;
   }
+
+  /* JAWABAN */
 
   .faq-section .faq-answer {
     padding: 0 16px 18px;
@@ -324,20 +386,23 @@
 
 /* =========================================
    RESPONSIVE MOBILE
+   MAX WIDTH 700PX
 ========================================= */
 
 @media (max-width: 700px) {
 
   .faq-section {
     min-height: auto;
-    padding: 55px 0 65px;
+    padding: 45px 0 55px;
   }
+
+  /* CONTAINER */
 
   .faq-section .faq-container {
     padding: 0 20px;
   }
 
-  /* HEADER MOBILE */
+  /* HEADER */
 
   .faq-section .faq-heading {
     display: flex;
@@ -348,21 +413,23 @@
     margin-bottom: 24px;
   }
 
-  /* LABEL PINK MOBILE */
+  /* LABEL PINK */
 
   .faq-section .faq-eyebrow {
-    font-size: 13px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
     line-height: 1.4;
-    margin-bottom: 12px;
+    letter-spacing: 1.4px;
   }
 
-  /* JUDUL MOBILE */
+  /* JUDUL FAQ */
 
   .faq-section .faq-heading h2 {
     width: 100%;
     max-width: 100%;
 
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     font-size: 22px;
     line-height: 1.25;
@@ -373,7 +440,7 @@
     display: inline;
   }
 
-  /* PARAGRAF MOBILE */
+  /* PARAGRAF PENGANTAR */
 
   .faq-section .faq-intro {
     width: 100%;
@@ -383,51 +450,92 @@
     line-height: 1.7;
   }
 
-  /* GRID MOBILE */
+  /* GRID 1 KOLOM */
 
   .faq-section .faq-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
+
+  /* KOLOM FAQ */
 
   .faq-section .faq-column {
     gap: 12px;
   }
 
-  /* KOTAK FAQ MOBILE */
+  /* KARTU FAQ */
+
+  .faq-section .faq-item {
+    border-radius: 14px;
+  }
+
+  /* PERTANYAAN MOBILE */
 
   .faq-section .faq-question {
+    gap: 12px;
+
     min-height: 58px;
     padding: 16px;
-    font-size: 13px;
+
+    font-size: 14px;
+    line-height: 1.5;
   }
+
+  /* IKON PLUS MINUS */
+
+  .faq-section .faq-toggle {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* JAWABAN MOBILE */
 
   .faq-section .faq-answer {
     padding: 0 16px 18px;
   }
 
   .faq-section .faq-answer p {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 
 /* =========================================
    MOBILE KECIL
+   MAX WIDTH 400PX
 ========================================= */
 
 @media (max-width: 400px) {
 
+  /* CONTAINER */
+
   .faq-section .faq-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
+  /* JUDUL */
+
   .faq-section .faq-heading h2 {
-    font-size: 22px;
+    font-size: 21px;
   }
+
+  /* PERTANYAAN */
 
   .faq-section .faq-question {
     padding: 14px;
+    font-size: 14px;
+  }
+
+  /* JAWABAN */
+
+  .faq-section .faq-answer {
+    padding: 0 14px 16px;
+  }
+
+  .faq-section .faq-answer p {
+    font-size: 13px;
+    line-height: 1.7;
   }
 }
 
