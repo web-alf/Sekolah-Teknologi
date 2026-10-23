@@ -29,7 +29,6 @@ const jenjangMenu = [
   },
 ];
 
-// Aktif jika sedang membuka halaman jenjang
 const isJenjangActive = isActive("/jenjang");
 ---
 
@@ -92,7 +91,6 @@ const isJenjangActive = isActive("/jenjang");
         ]}
       >
 
-        <!-- KLIK JENJANG MENUJU HALAMAN JENJANG -->
         <a
           href="/jenjang"
           class:list={[
@@ -111,7 +109,6 @@ const isJenjangActive = isActive("/jenjang");
 
         <!-- PILIH SD / SMP / SMA -->
         <div class="dropdown-menu">
-
           {jenjangMenu.map((item) => (
             <a
               href={item.link}
@@ -130,7 +127,6 @@ const isJenjangActive = isActive("/jenjang");
               {item.nama}
             </a>
           ))}
-
         </div>
       </div>
 
@@ -169,7 +165,7 @@ const isJenjangActive = isActive("/jenjang");
       <span aria-hidden="true">→</span>
     </a>
 
-    <!-- HAMBURGER MOBILE -->
+    <!-- HAMBURGER MOBILE: HANYA 3 GARIS -->
     <button
       class="menu-toggle"
       type="button"
@@ -177,9 +173,6 @@ const isJenjangActive = isActive("/jenjang");
       aria-expanded="false"
       aria-controls="main-nav"
     >
-      <span></span>
-      <span></span>
-      <span></span>
       <span></span>
       <span></span>
       <span></span>

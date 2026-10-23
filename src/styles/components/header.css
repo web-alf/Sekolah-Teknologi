@@ -16,7 +16,9 @@
   overflow: visible;
 }
 
-/* HEADER CONTAINER */
+/* =========================================
+   HEADER CONTAINER
+========================================= */
 
 .header-inner {
   position: relative;
@@ -46,8 +48,6 @@
 
   text-decoration: none;
 }
-
-/* Logo tidak memengaruhi tinggi header */
 
 .brand img {
   position: absolute;
@@ -124,8 +124,6 @@
   position: relative;
 }
 
-/* Ikon V menggunakan CSS */
-
 .dropdown-chevron {
   display: inline-block;
 
@@ -140,8 +138,6 @@
 
   transform: translateY(-2px) rotate(45deg);
 }
-
-/* Menu dropdown */
 
 .dropdown-menu {
   display: none;
@@ -177,13 +173,14 @@
   text-decoration: none;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
   background: #eaf7fd;
   color: #008dd2;
 }
 
 /* =========================================
-   TOMBOL LIHAT JENJANG
+   TOMBOL DAFTAR SEKARANG
 ========================================= */
 
 .header-cta {
@@ -226,19 +223,44 @@
   padding: 8px;
 
   border: none;
+  border-radius: 8px;
   background: transparent;
+
   cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  flex-shrink: 0;
 }
 
 .menu-toggle span {
   display: block;
 
-  width: 100%;
+  width: 24px;
   height: 2px;
-  margin: 5px 0;
+  margin: 0;
+  padding: 0;
 
   background: #102b50;
   border-radius: 3px;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: #f5f7fa;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid #008dd2;
+  outline-offset: 3px;
 }
 
 /* =========================================
@@ -246,6 +268,11 @@
 ========================================= */
 
 @media (max-width: 1000px) {
+
+  .site-header {
+    height: 60px;
+  }
+
   .header-inner {
     height: 60px;
     padding: 0 24px;
@@ -322,7 +349,7 @@
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 }
 
@@ -331,6 +358,7 @@
 ========================================= */
 
 @media (max-width: 480px) {
+
   .header-inner {
     padding: 0 16px;
   }
